@@ -1,0 +1,113 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  transition: .3s ease-in-out;
+  &::before {
+    content: "";
+    position: absolute;
+    background: #1c2642;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(-100%);
+    transition: 0.3s ease-in-out;
+  }
+  &--scroll {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    &::before {
+      transform: translateY(0);
+    }
+  }
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__left {
+    position: relative;
+    flex: 0 0 auto;
+  }
+  &__logo {
+    position: relative;
+  }
+  &__logo-link {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  &__center {
+    position: relative;
+    flex: 0 0 auto;
+  }
+  &__nav {
+    position: relative;
+  }
+  &__nav-list {
+    position: relative;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    li {
+      flex: 0 0 auto;
+      position: relative;
+      margin-right: 10px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      padding: 8px 15px;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 150%;
+      color: #fff;
+      border-radius: 4px;
+      transition: 0.3s ease-in-out;
+      @include desktop-hover() {
+        background: rgba(255, 255, 255, 0.2);
+      }
+      img {
+        flex: 0 0 auto;
+        margin-right: 10px;
+      }
+    }
+  }
+  &__right {
+    position: relative;
+    flex: 0 0 auto;
+  }
+  &__btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: #fff;
+    padding: 12px 24px;
+    border: 2px solid #ffcc00;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    @include desktop-hover() {
+      background: #ffcc00;
+    }
+  }
+}

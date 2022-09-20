@@ -3,7 +3,34 @@ body {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: none;
+  font-family: "Inter", "Domine", sans-serif;
+  color: #183B56;
+  font-size: 16px;
+  line-height: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
+
+.wrapper {
+  position: relative;
+  max-width: 100%;
+  width: 100%;
+  overflow: hidden;
+  flex: 1 1 auto;
+}
+
+.container {
+  position: relative;
+  max-width: 1240px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  &--small {
+    max-width: 1020px;
+  }
+}
+
 * {
   outline: none;
   box-sizing: border-box;

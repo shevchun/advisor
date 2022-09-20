@@ -77,6 +77,7 @@
     "element.prototype.matches": "^0.1.1",
     "jquery": "latest",
     "nodelist-foreach-polyfill": "^1.2.0",
+    "slick-carousel": "^1.8.1",
     "svg4everybody": "latest"
   }
 }
