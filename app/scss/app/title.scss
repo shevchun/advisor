@@ -1,0 +1,32 @@
+.title {
+  position: relative;
+  margin: 0 0 16px;
+  font-family: "Domine";
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 150%;
+  text-align: center;
+  span {
+    color: #cb0101;
+  }
+  &--white {
+    color: #fff;
+    span {
+      color: #ffbb00;
+    }
+  }
+}
+.title-descriptions {
+  position: relative;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: -0.02em;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto 40px;
+  &--white {
+    color: rgba(255, 255, 255, 0.7);
+  }
+}
