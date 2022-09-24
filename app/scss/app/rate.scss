@@ -1,3 +1,27 @@
+.rate-value {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: rgba(24, 59, 86, 0.4);
+  margin-bottom: 4px;
+  &__currrent {
+    font-weight: 700;
+    font-size: 16px;
+    color: #cb0101;
+    flex: 0 0 auto;
+    margin-right: 4px;
+  }
+  &__all {
+    flex: 0 0 auto;
+    margin-left: 4px;
+    font-weight: 600;
+  }
+}
+
 .rate {
   position: relative;
   margin-right: -5px;

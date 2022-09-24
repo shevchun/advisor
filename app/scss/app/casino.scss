@@ -1,0 +1,271 @@
+.casino {
+  position: relative;
+  background: #f8fafd;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  &__head {
+    position: relative;
+    margin-bottom: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__head-left {
+    position: relative;
+    padding-right: 10px;
+  }
+  &__sub-title {
+    position: relative;
+    &.sub-title {
+      text-align: left;
+    }
+  }
+  &__title {
+    &.title {
+      margin-bottom: 0;
+      text-align: left;
+    }
+  }
+  &__head-right {
+    position: relative;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+    color: #5a7184;
+    max-width: 393px;
+  }
+  &__table {
+    position: relative;
+    border: 1px solid #e1e1e7;
+  }
+  &__table-head {
+    position: relative;
+    display: flex;
+    border-bottom: 2px solid #e1e1e7;
+    background: #fff;
+    .casino__table-cell {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 22px;
+      color: #183b56;
+    }
+  }
+  &__table-cell {
+    position: relative;
+    text-align: center;
+    padding: 16px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &:nth-child(1) {
+      flex: 0 0 160px;
+      max-width: 160px;
+    }
+    &:nth-child(2) {
+      flex: 0 0 160px;
+      max-width: 160px;
+    }
+    &:nth-child(3) {
+      flex: 0 0 380px;
+      max-width: 380px;
+    }
+    &:nth-child(4) {
+      flex: 0 0 290px;
+      max-width: 290px;
+    }
+    &:nth-child(5) {
+      flex: 1 1 auto;
+    }
+  }
+  &__table-body {
+    position: relative;
+    background: #fff;
+  }
+  &__table-row {
+    position: relative;
+    display: flex;
+    border-bottom: 1px solid #e1e1e7;
+    &:last-child {
+      border-bottom: 0;
+    }
+    @include desktop-hover() {
+      .casino__table-aside-btn {
+        transform: scaleX(1);
+      }
+      &::before {
+        opacity: 1;
+      }
+      .casino__table-bonus:not(.casino__table-bonus--no) {
+        background: rgba(255, 204, 0, 0.2);
+        border-color: rgba(184, 147, 0, 0.6);
+      }
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(270deg, rgba(255, 204, 0, 0.24) 0%, rgba(255, 255, 255, 0) 100%);
+      opacity: 0;
+      transition: 0.3s ease-in-out;
+    }
+    &:nth-child(odd) {
+      background: #f8fafd;
+    }
+  }
+  &__table-bonus {
+    position: relative;
+    padding: 8px 12px;
+    background: #ebeef2;
+    border: 1px solid #ebeef2;
+    border-radius: 2px;
+    display: inline-flex;
+    vertical-align: top;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease-in-out;
+    &--no {
+      background: transparent;
+      color: #717171;
+      border-color: transparent;
+    }
+  }
+  &__table-bonus-icon {
+    position: relative;
+    display: flex;
+    flex: 0 0 auto;
+    margin-right: 12px;
+  }
+  &__table-bonus-title {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    flex: 0 0 auto;
+    margin-right: 12px;
+  }
+  &__table-bonus-value {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 22px;
+    position: relative;
+    flex: 0 0 auto;
+  }
+  &__table-country {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__table-country-item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 32px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #f5f5f9;
+    background: #f5f5f9;
+    @include desktop-hover() {
+      .casino__table-country-hint {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0) translateX(-50%);
+      }
+    }
+    & + .casino__table-country-item {
+      margin-left: -8px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &--all {
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 18px;
+      overflow: visible;
+    }
+  }
+  &__table-country-hint {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    padding: 12px 20px;
+    background: #1c2642;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    color: #fff;
+    width: 166px;
+    opacity: 0;
+    transform: translateY(10px) translateX(-50%);
+    visibility: hidden;
+    z-index: 1;
+    transition: 0.3s ease-in-out;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      transform: rotate(45deg);
+      background: #1c2642;
+      top: -6px;
+      left: 50%;
+      margin-left: -6px;
+    }
+  }
+  &__table-btn-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 20px;
+    width: 100%;
+  }
+  &__table-btn {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000066;
+    @include desktop-hover() {
+      text-decoration: underline;
+    }
+    svg {
+      flex: 0 0 auto;
+      margin-left: 8px;
+    }
+  }
+  &__table-aside-btn {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 100%;
+    width: 40px;
+    background: #1c2642;
+    border-radius: 0px 8px 8px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 4px solid #ffcc00;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: 0.3s ease-in-out;
+    svg {
+      fill: #ffcc00;
+    }
+  }
+}

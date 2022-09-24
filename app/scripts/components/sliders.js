@@ -3,6 +3,20 @@ import 'slick-carousel';
 
 export default () => {
 
+  if ($('.featured__slider').length) {
+    $('.featured__slider').slick({
+      slidesToShow: 1,
+      fade: true,
+      arrows: false,
+      dots: true,
+      autoplay: true,
+      autoplaySpeed: 5000,
+      pauseOnHover: false,
+      pauseOnFocus: false,
+      speed: 100
+    });
+  }
+
   if ($('.slider__list').length) {
     $('.slider__list').each((i, element) => {
       const allItems = $(element).find('.slider__item').length
@@ -88,7 +102,7 @@ export default () => {
         }
       })
     })
-    
+
   }
 
 }

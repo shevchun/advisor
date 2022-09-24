@@ -2,6 +2,12 @@ import $ from 'jquery'
 
 export default () => {
 
+  $('.js-scroll-top').on('click', () => {
+    $('html, body').animate({
+      scrollTop: 0
+    }, 500);
+  });
+
   $('[data-rate]').each((index, element) => {
     const val = $(element).attr('data-rate')
     const full = val.split('.')[0] || null
