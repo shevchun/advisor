@@ -3,16 +3,27 @@
   background: #f8fafd;
   padding-top: 80px;
   padding-bottom: 80px;
+  @include response(1200px) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  } 
   &__head {
     position: relative;
     margin-bottom: 48px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include response(1200px) {
+      display: block;
+    }
   }
   &__head-left {
     position: relative;
     padding-right: 10px;
+    @include response(1200px) {
+      padding-right: 0;
+      margin-bottom: 16px;
+    }
   }
   &__sub-title {
     position: relative;

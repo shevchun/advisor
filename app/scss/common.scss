@@ -26,6 +26,10 @@ body {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+  @include response(1250px) {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
   &--small {
     max-width: 1020px;
   }

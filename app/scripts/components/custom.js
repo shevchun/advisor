@@ -2,6 +2,34 @@ import $ from 'jquery'
 
 export default () => {
 
+  $('.we-rate__nav-row').on('click', function clickDownScroll() {
+    if ($(window).width() < 1200) {
+      const marginTop = 60
+      const scrollEl = $(this)
+      if ($(scrollEl).length !== 0) {
+        $('html, body').animate(
+          {
+            scrollTop: $(scrollEl).offset().top - marginTop,
+          },
+          500
+        )
+      }
+    }
+  })
+
+  $('.menu-item-has-children').on('click', function menuChildren() {
+    if ($(window).width() < 1200) {
+      $(this).toggleClass('active')
+      return false
+    }
+    return null
+  })
+
+  $('.header__mobile-menu-btn').on('click', ()=> {
+    $('.header').toggleClass('active')
+    $('.menu-item-has-children').removeClass('active')
+  })
+
   $('.js-scroll-top').on('click', () => {
     $('html, body').animate({
       scrollTop: 0

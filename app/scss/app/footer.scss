@@ -167,6 +167,10 @@
     position: relative;
     display: flex;
     align-items: center;
+    @include response(1200px) {
+      display: block;
+      text-align: center;
+    }
   }
   &__certified-title {
     flex: 0 0 auto;
@@ -175,16 +179,27 @@
     font-size: 14px;
     line-height: 18px;
     color: #595f6b;
+    @include response(1200px) {
+      margin-right: 0;
+      margin-bottom: 12px;
+      font-size: 12px;
+    }
   }
   &__certified-list {
     position: relative;
     display: flex;
     align-items: center;
+    @include response(1200px) {
+      justify-content: center;
+    }
   }
   &__certified-item {
     position: relative;
     flex: 0 0 auto;
     margin-right: 16px;
+    @include response(1200px) {
+      margin-right: 10px;
+    }
     &:last-child {
       margin-right: 0;
     }

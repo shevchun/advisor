@@ -2,11 +2,22 @@
   position: relative;
   padding-top: 60px;
   padding-bottom: 60px;
+  @include response(1200px) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
   &__title {
     position: relative;
   }
   &__descriptions {
     position: relative;
+  }
+  &__holder {
+    position: relative;
+    @include response(1200px) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
   }
   &__options {
     position: relative;
@@ -21,6 +32,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include response(1200px) {
+      padding: 58px 20px 35px;
+      background: #f8fafd;
+      flex-direction: column-reverse;
+    }
   }
   &__box-decor {
     position: absolute;
@@ -28,12 +44,19 @@
     top: 0;
     width: auto;
     height: 100%;
+    @include response(1200px) {
+      display: none;
+    }
   }
   &__box-left {
     position: relative;
     flex: 0 0 360px;
     max-width: 360px;
     width: 100%;
+    @include response(1200px) {
+      flex: 0 0 auto;
+      max-width: 100%;
+    }
   }
   &__box-title {
     margin-bottom: 12px;
@@ -41,6 +64,10 @@
     font-weight: 700;
     font-size: 28px;
     line-height: 150%;
+    @include response(1200px) {
+      font-size: 18px;
+      text-align: center;
+    }
   }
   &__box-text {
     font-weight: 400;
@@ -48,6 +75,10 @@
     line-height: 150%;
     letter-spacing: -0.02em;
     margin-bottom: 36px;
+    @include response(1200px) {
+      font-size: 14px;
+      margin-bottom: 24px;
+    }
   }
   &__box-list {
     list-style: none;
@@ -61,6 +92,9 @@
       font-weight: 600;
       font-size: 14px;
       line-height: 150%;
+      @include response(1200px) {
+        margin-bottom: 8px;
+      }
       svg {
         flex: 0 0 auto;
         margin-right: 8px;
@@ -72,15 +106,23 @@
   }
   &__box-right {
     position: relative;
+    @include response(1200px) {
+      margin-bottom: 24px;
+    }
   }
   &__box-img {
     display: flex;
+    max-width: 160px;
   }
   &__nav-holder {
     position: relative;
     display: flex;
     justify-content: center;
     margin-top: -12px;
+    @include response(1200px) {
+      margin-top: 0;
+      margin-bottom: -22px;
+    }
   }
   &__nav {
     position: relative;
@@ -96,6 +138,9 @@
     li {
       flex: 0 0 auto;
       margin-right: 20px;
+      @include response(1200px) {
+        margin-right: 10px;
+      }
       &:last-child {
         margin-right: 0;
         a {
@@ -117,6 +162,11 @@
       padding: 10px 20px;
       position: relative;
       transition: 0.3s ease-in-out;
+      @include response(1200px) {
+        font-size: 14px;
+        padding-left: 12px;
+        padding-right: 12px;
+      }
       &::before {
         content: "";
         position: absolute;
@@ -126,6 +176,9 @@
         top: 50%;
         margin-top: -14px;
         right: -10px;
+        @include response(1200px) {
+          right: -5px;
+        }
       }
       &.active {
         background: #cb0101;

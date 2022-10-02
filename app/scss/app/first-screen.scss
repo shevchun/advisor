@@ -2,13 +2,21 @@
   position: relative;
   padding-top: 194px;
   padding-bottom: 150px;
+  @include response(1200px) {
+    padding-top: 116px;
+    padding-bottom: 70px;
+  }
   &__img {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
   &__title {
     position: relative;
@@ -19,6 +27,12 @@
     text-align: center;
     color: #fff;
     margin-bottom: 32px;
+    @include response(1200px) {
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 150%;
+      margin-bottom: 20px;
+    }
     span {
       color: #ffcc00;
     }
@@ -33,6 +47,9 @@
   &__form {
     position: relative;
     margin-bottom: 36px;
+    @include response(1200px) {
+      margin-bottom: 30px;
+    }
   }
   &__form-icon {
     position: absolute;
@@ -40,6 +57,9 @@
     top: 50%;
     margin-top: -12px;
     z-index: 1;
+    @include response(1200px) {
+      left: 20px;
+    }
   }
   &__form-input {
     position: relative;
@@ -52,6 +72,12 @@
     font-size: 16px;
     line-height: 19px;
     border: 0;
+    @include response(1200px) {
+      height: 50px;
+      padding-left: 56px;
+      padding-right: 90px;
+      font-size: 14px;
+    }
     &::placeholder {
       color: #595f6b;
     }
@@ -60,15 +86,25 @@
     position: absolute;
     right: 5px;
     top: 5px;
+    bottom: 5px;
     font-weight: 600;
     font-size: 16px;
     line-height: 150%;
     color: #000066;
     background: #ffcc00;
     border-radius: 8px;
-    padding: 16px 32px;
+    padding: 10px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: 0;
     transition: 0.3s ease-in-out;
+    @include response(1200px) {
+      padding-left: 16px;
+      padding-right: 16px;
+      font-size: 14px;
+      border-radius: 4px;
+    }
     @include desktop-hover() {
       background: #183b56;
       color: #fff;
@@ -78,12 +114,19 @@
     position: relative;
     display: flex;
     justify-content: space-between;
+    @include response(1200px) {
+      display: block;
+    }
   }
   &__left {
     position: relative;
     flex: 0 0 350px;
     max-width: 350px;
     width: 100%;
+    @include response(1200px) {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
   }
   &__small-title {
     margin-bottom: 16px;
@@ -92,12 +135,20 @@
     line-height: 17px;
     letter-spacing: 0.04em;
     color: rgba(255, 255, 255, 0.5);
+    @include response(1200px) {
+      font-size: 12px;
+      margin-bottom: 12px;
+      text-align: center;
+    }
   }
   &__list {
     position: relative;
     display: flex;
     flex-wrap: wrap;
     margin-left: -12px;
+    @include response(1200px) {
+      justify-content: center;
+    }
   }
   &__list-item {
     position: relative;
@@ -116,6 +167,9 @@
     border: 1px solid rgba(255, 255, 255, 0.32);
     border-radius: 2px;
     transition: 0.3s ease-in-out;
+    @include response(1200px) {
+      font-size: 12px;
+    }
     @include desktop-hover() {
       background: rgba(255, 255, 255, 0.15);
       border-color: #fff;
@@ -130,5 +184,8 @@
     flex: 0 0 270px;
     max-width: 270px;
     width: 100%;
+    @include response(1200px) {
+      max-width: 100%;
+    }
   }
 }
