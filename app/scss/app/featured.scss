@@ -2,6 +2,10 @@
   position: relative;
   padding-top: 60px;
   padding-bottom: 80px;
+  @include response(1200px) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
   &__sub {
     position: relative;
   }
@@ -15,6 +19,9 @@
     position: relative;
     display: flex;
     align-items: center;
+    @include response(1200px) {
+      display: block;
+    }
   }
   &__slider {
     position: relative;
@@ -24,6 +31,12 @@
     margin-right: 24px;
     border-radius: 8px;
     overflow: hidden;
+    transform: translateZ(0);
+    @include response(1200px) {
+      max-width: 100%;
+      margin-bottom: 20px;
+      margin-right: 0;
+    }
     .slick-dots {
       position: absolute;
       display: flex;
@@ -34,10 +47,17 @@
       padding: 0;
       margin: 0;
       z-index: 1;
+      @include response(1200px) {
+        left: 20px;
+        right: 20px;
+      }
       li {
         width: 100%;
         margin-right: 6px;
         display: flex;
+        @include response(1200px) {
+          margin-right: 3px;
+        }
         &.slick-active {
           button {
             &::before {
@@ -55,6 +75,7 @@
         height: 4px;
         border-radius: 5px;
         overflow: hidden;
+        transform: translateZ(0);
         position: relative;
         &::before {
           content: "";
@@ -71,6 +92,16 @@
   }
   &__slider-item {
     position: relative;
+    vertical-align: top;
+
+    @include response(1200px) {
+      height: 324px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
   &__slider-item-box {
     position: absolute;
@@ -83,12 +114,19 @@
     flex-direction: column;
     justify-content: flex-end;
     background: linear-gradient(180deg, rgba(24, 59, 86, 0.0001) 0%, rgba(22, 49, 70, 0.7) 50.55%, #152532 100%);
+    @include response(1200px) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
   }
   &__slider-item-row {
     position: relative;
     display: flex;
     align-items: center;
     margin-bottom: 16px;
+    @include response(1200px) {
+      margin-bottom: 12px;
+    }
   }
   &__slider-item-date {
     font-weight: 400;
@@ -97,6 +135,9 @@
     color: #fff;
     flex: 0 0 auto;
     margin-right: 20px;
+    @include response(1200px) {
+      font-size: 14px;
+    }
   }
   &__slider-item-type {
     position: relative;
@@ -109,6 +150,9 @@
     background: rgba(255, 255, 255, 0.24);
     border: 1px solid rgba(255, 255, 255, 0.62);
     border-radius: 4px;
+    @include response(1200px) {
+      font-size: 12px;
+    }
   }
   &__slider-item-title {
     display: block;
@@ -124,6 +168,12 @@
     display: box;
     display: -webkit-box;
     -webkit-box-orient: vertical;
+    @include response(1200px) {
+      font-size: 18px;
+      line-height: 27px;
+      -webkit-line-clamp: 3;
+      max-height: 81px;
+    }
     @include desktop-hover() {
       text-decoration: underline;
     }
@@ -131,8 +181,7 @@
   &__right {
     position: relative;
     flex: 1 1 auto;
-
-    position: relative;
+    overflow: auto;
   }
   &__list {
     position: relative;
@@ -147,6 +196,10 @@
     margin-bottom: 24px;
     display: flex;
     align-items: center;
+    @include response(1200px) {
+      padding: 16px;
+      margin-bottom: 20px;
+    }
     &:last-child {
       margin-bottom: 0;
     }
@@ -159,6 +212,12 @@
     border-radius: 4px;
     overflow: hidden;
     margin-right: 24px;
+    @include response(1200px) {
+      margin-right: 16px;
+      flex: 0 0 100px;
+      width: 100px;
+      height: 95px;
+    }
     @include desktop-hover() {
       img {
         transform: scale(1.03);
@@ -173,6 +232,11 @@
   }
   &__item-box {
     position: relative;
+    overflow: auto;
+    @include response(1200px) {
+      display: flex;
+      flex-direction: column-reverse;
+    }
   }
   &__item-title {
     display: block;
@@ -188,6 +252,13 @@
     display: box;
     display: -webkit-box;
     -webkit-box-orient: vertical;
+    @include response(1200px) {
+      font-size: 14px;
+      line-height: 21px;
+      max-height: 63px;
+      -webkit-line-clamp: 3;
+      margin-bottom: 0;
+    }
     @include desktop-hover() {
       text-decoration: underline;
     }
@@ -196,6 +267,9 @@
     position: relative;
     display: flex;
     align-items: center;
+    @include response(1200px) {
+      margin-bottom: 8px;
+    }
   }
   &__item-type {
     flex: 0 0 auto;
@@ -207,12 +281,24 @@
     border: 1px solid rgba(24, 59, 86, 0.12);
     border-radius: 4px;
     margin-right: 20px;
+    @include response(1200px) {
+      font-size: 12px;
+      line-height: 16px;
+      margin-right: 12px;
+    }
   }
   &__item-date {
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
     color: #5a7184;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @include response(1200px) {
+      font-size: 10px;
+      line-height: 22px;
+    }
   }
 }
 

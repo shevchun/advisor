@@ -2,8 +2,8 @@ import $ from 'jquery'
 
 export default () => {
 
-  $('.we-rate__nav-row').on('click', function clickDownScroll() {
-    if ($(window).width() < 1200) {
+  if ($(window).width() < 1200) {
+    $('.we-rate__nav-row').on('click', function clickDownScroll() {
       const marginTop = 60
       const scrollEl = $(this)
       if ($(scrollEl).length !== 0) {
@@ -14,18 +14,26 @@ export default () => {
           500
         )
       }
-    }
-  })
+    })
 
-  $('.menu-item-has-children').on('click', function menuChildren() {
-    if ($(window).width() < 1200) {
-      $(this).toggleClass('active')
+    $('.menu-item-has-children > a').on('click', function menuChildren() {
+      $(this).parent('.menu-item-has-children').toggleClass('active')
       return false
-    }
-    return null
-  })
+    })
 
-  $('.header__mobile-menu-btn').on('click', ()=> {
+    $('.casino__table-country-item--all').on('click', function countryAll(event) {
+      event.stopPropagation()
+      $(this).toggleClass('active')
+    })
+
+    $(document).on("click", (event) => {
+      event.stopPropagation()
+      $('.casino__table-country-item--all').removeClass('active')
+    })
+  }
+
+
+  $('.header__mobile-menu-btn').on('click', () => {
     $('.header').toggleClass('active')
     $('.menu-item-has-children').removeClass('active')
   })

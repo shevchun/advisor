@@ -3,6 +3,27 @@ import 'slick-carousel';
 
 export default () => {
 
+  const providersSettings = {
+    slidesToShow: 1,
+    dots: true,
+    arrows: false,
+    mobileFirst: true,
+    infinite: false,
+    responsive: [
+      {
+        breakpoint: 1201,
+        settings: "unslick"
+      }
+    ]
+  }
+  const providersSlider = $('.providers__list').slick(providersSettings);
+
+  $(window).on('load resize', () => {
+    if ($(window).width() < 1200 && !providersSlider.hasClass('slick-initialized')) {
+      $(providersSlider).slick(providersSettings);
+    }
+  })
+
   if ($('.featured__slider').length) {
     $('.featured__slider').slick({
       slidesToShow: 1,

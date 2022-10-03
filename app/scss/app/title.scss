@@ -28,6 +28,9 @@
   color: #cc0000;
   margin: 0 0 16px;
   text-align: center;
+  @include response(1200px) {
+    display: none;
+  }
 }
 
 .title-descriptions {

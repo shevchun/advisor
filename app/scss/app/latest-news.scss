@@ -4,6 +4,10 @@
   border-top: 1px solid #e1e1e7;
   padding-top: 80px;
   padding-bottom: 60px;
+  @include response(1200px) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
   &__sub {
     position: relative;
   }
@@ -19,6 +23,9 @@
   display: flex;
   flex-wrap: wrap;
   margin-left: -32px;
+  @include response(1200px) {
+    margin-left: -24px;
+  }
 }
 .news-item {
   position: relative;
@@ -34,11 +41,27 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  @include response(1200px) {
+    flex: 0 0 calc(50% - 24px);
+    max-width: calc(50% - 24px);
+    margin-left: 24px;
+    margin-bottom: 24px;
+  }
+  @include response(767px) {
+    flex: 0 0 calc(100% - 24px);
+    max-width: calc(100% - 24px);
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
   &__img {
     display: block;
     overflow: hidden;
     position: relative;
     height: 249px;
+    @include response(1200px) {
+      height: 211px;
+    }
     @include desktop-hover() {
       img {
         transform: scale(1.03);
@@ -57,6 +80,9 @@
     display: flex;
     flex-direction: column;
     flex: 1 1 auto;
+    @include response(1200px) {
+      padding: 24px;
+    }
   }
   &__box-top {
     position: relative;
@@ -78,6 +104,9 @@
     -webkit-box-orient: vertical;
     color: #183b56;
     text-decoration: none;
+    @include response(1200px) {
+      font-size: 18px;
+    }
     @include desktop-hover() {
       text-decoration: underline;
     }
@@ -131,11 +160,17 @@
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
+    @include response(1200px) {
+      font-size: 14px;
+    }
   }
   &__date {
     font-weight: 400;
     font-size: 14px;
     line-height: 150%;
+    @include response(1200px) {
+      font-size: 12px;
+    }
   }
   &__right {
     position: relative;

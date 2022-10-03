@@ -6,7 +6,8 @@
   @include response(1200px) {
     padding-top: 40px;
     padding-bottom: 40px;
-  } 
+    border-top: 1px solid #e1e1e7;
+  }
   &__head {
     position: relative;
     margin-bottom: 48px;
@@ -45,16 +46,26 @@
     letter-spacing: -0.02em;
     color: #5a7184;
     max-width: 393px;
+    @include response(1200px) {
+      max-width: 100%;
+      font-size: 14px;
+    }
   }
   &__table {
     position: relative;
     border: 1px solid #e1e1e7;
+    @include response(1200px) {
+      border: 0;
+    }
   }
   &__table-head {
     position: relative;
     display: flex;
     border-bottom: 2px solid #e1e1e7;
     background: #fff;
+    @include response(1200px) {
+      display: none;
+    }
     .casino__table-cell {
       font-weight: 600;
       font-size: 14px;
@@ -71,21 +82,44 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    @include response(1200px) {
+      padding: 0;
+    }
     &:nth-child(1) {
       flex: 0 0 160px;
       max-width: 160px;
+      @include response(1200px) {
+        max-width: 100%;
+        img {
+          width: 171px;
+        }
+      }
     }
     &:nth-child(2) {
       flex: 0 0 160px;
       max-width: 160px;
+      @include response(1200px) {
+        max-width: 100%;
+        margin-bottom: 24px;
+      }
     }
     &:nth-child(3) {
       flex: 0 0 380px;
       max-width: 380px;
+      @include response(1200px) {
+        max-width: 100%;
+        margin-bottom: 16px;
+      }
     }
     &:nth-child(4) {
       flex: 0 0 290px;
       max-width: 290px;
+      @include response(1200px) {
+        max-width: 100%;
+        padding-bottom: 24px;
+        border-bottom: 1px solid #e1e1e7;
+        margin-bottom: 24px;
+      }
     }
     &:nth-child(5) {
       flex: 1 1 auto;
@@ -94,13 +128,29 @@
   &__table-body {
     position: relative;
     background: #fff;
+    @include response(1200px) {
+      background: transparent;
+    }
   }
   &__table-row {
     position: relative;
     display: flex;
     border-bottom: 1px solid #e1e1e7;
+    @include response(1200px) {
+      margin-bottom: 36px;
+      background: #fff;
+      display: block;
+      text-align: center;
+      padding: 24px 52px;
+      border-radius: 8px;
+      border: 1px solid #e1e1e7;
+    }
     &:last-child {
       border-bottom: 0;
+      @include response(1200px) {
+        margin-bottom: 0;
+        border-bottom: 1px solid #e1e1e7;
+      }
     }
     @include desktop-hover() {
       .casino__table-aside-btn {
@@ -127,6 +177,9 @@
     }
     &:nth-child(odd) {
       background: #f8fafd;
+      @include response(1200px) {
+        background: #fff;
+      }
     }
   }
   &__table-bonus {
@@ -235,6 +288,11 @@
       left: 50%;
       margin-left: -6px;
     }
+    .active.casino__table-country-item--all & {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0) translateX(-50%);
+    }
   }
   &__table-btn-box {
     position: relative;
@@ -243,6 +301,10 @@
     justify-content: flex-end;
     padding-right: 20px;
     width: 100%;
+    @include response(1200px) {
+      padding-right: 0;
+      justify-content: center;
+    }
   }
   &__table-btn {
     display: flex;
