@@ -25,6 +25,12 @@
       opacity: 0;
       transform: none;
     }
+    .black-header & {
+      transform: translateY(0);
+      @include response(1200px) {
+        opacity: 1;
+      }
+    }
   }
   &--scroll {
     padding-top: 10px;

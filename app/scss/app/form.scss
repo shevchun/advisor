@@ -1,0 +1,75 @@
+.form {
+  position: relative;
+  max-width: 556px;
+  width: 100%;
+  margin: 0 auto 24px;
+  &__form {
+    position: relative;
+    margin-bottom: 36px;
+    @include response(1200px) {
+      margin-bottom: 30px;
+    }
+  }
+  &__icon {
+    position: absolute;
+    left: 22px;
+    top: 50%;
+    margin-top: -12px;
+    z-index: 1;
+    @include response(1200px) {
+      left: 20px;
+    }
+  }
+  &__input {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    padding: 0 90px 0 60px;
+    background: #f8fafd;
+    border: 1px solid #e1e1e7;
+    border-radius: 8px;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: -0.02em;
+    transition: .3s ease-in-out;
+    @include response(1200px) {
+      height: 50px;
+      padding-left: 56px;
+      padding-right: 90px;
+      font-size: 14px;
+    }
+    &:focus {
+      border-color: #595f6b;
+    }
+    &::placeholder {
+      color: #595f6b;
+    }
+  }
+  &__btn {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    bottom: 5px;
+    color: #000066;
+    background: #ffcc00;
+    border-radius: 8px;
+    padding: 5px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    font-weight: 600;
+    font-size: 14px;
+    transition: 0.3s ease-in-out;
+    @include response(1200px) {
+      padding-left: 16px;
+      padding-right: 16px;
+      font-size: 14px;
+      border-radius: 4px;
+    }
+    @include desktop-hover() {
+      background: #183b56;
+      color: #fff;
+    }
+  }
+}
