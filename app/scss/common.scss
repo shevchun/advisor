@@ -35,6 +35,16 @@ body {
   }
 }
 
+.main {
+  position: relative;
+  padding-top: 143px;
+  padding-bottom: 90px;
+  @include response(1200px) {
+    padding-top: 104px;
+    padding-bottom: 40px;
+  }
+}
+
 * {
   outline: none;
   box-sizing: border-box;

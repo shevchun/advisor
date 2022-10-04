@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include 'head.html' %}
+  <body class="black-header">
+    {% include 'header.html' %}
+    <div class="wrapper">
+      <div class="main">
+        <div class="container">
+          <ul class="breadcrumb">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Author</a></li>
+            <li><span>Johanna Murray</span></li>
+          </ul>
+        </div>
+        <div class="author">
+          <div class="container">
+            <div class="author__head">
+              <div class="author__head-box">
+                <div class="author__head-ava">
+                  <img src="data/Johanna-Murray.jpg" width="80" height="80" alt="Johanna-Murray">
+                </div>
+                <div class="author__head-info">
+                  <div class="author__head-name">Johanna Murray</div>
+                  <div class="author__head-verifed">Verifed Author</div>
+                </div>
+              </div>
+              <ul class="social social--black">
+                <li>
+                  <a href="#" target="_blank" rel="nofollow">
+                    <svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M22.4043 19.1718L22.9172 15.9128H19.7576V13.7945C19.7576 12.9034 20.1987 12.0326 21.6092 12.0326H23.066V9.25741C22.2176 9.12214 21.3604 9.04895 20.5013 9.03845C17.9008 9.03845 16.203 10.6017 16.203 13.4279V15.9128H13.3203V19.1718H16.203V27.0545H19.7576V19.1718H22.4043Z" />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" rel="nofollow">
+                    <svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M15.0041 18.0461C15.0041 16.3878 16.3476 15.0432 18.0054 15.0432C19.6632 15.0432 21.0074 16.3878 21.0074 18.0461C21.0074 19.7043 19.6632 21.049 18.0054 21.049C16.3476 21.049 15.0041 19.7043 15.0041 18.0461ZM13.3812 18.0461C13.3812 20.6008 15.4515 22.6716 18.0054 22.6716C20.5593 22.6716 22.6296 20.6008 22.6296 18.0461C22.6296 15.4914 20.5593 13.4206 18.0054 13.4206C15.4515 13.4206 13.3812 15.4914 13.3812 18.0461ZM21.732 13.2372C21.7319 13.451 21.7952 13.66 21.9139 13.8378C22.0325 14.0156 22.2013 14.1542 22.3987 14.2361C22.5961 14.318 22.8134 14.3395 23.023 14.2979C23.2327 14.2563 23.4253 14.1534 23.5765 14.0023C23.7276 13.8512 23.8306 13.6586 23.8724 13.4489C23.9142 13.2393 23.8929 13.0219 23.8112 12.8243C23.7295 12.6268 23.591 12.4579 23.4134 12.3391C23.2357 12.2202 23.0268 12.1567 22.8131 12.1567H22.8126C22.5261 12.1568 22.2514 12.2707 22.0488 12.4733C21.8462 12.6759 21.7322 12.9506 21.732 13.2372ZM14.3672 25.3784C13.4892 25.3384 13.012 25.1921 12.6949 25.0685C12.2744 24.9048 11.9744 24.7098 11.659 24.3947C11.3436 24.0796 11.1484 23.7799 10.9854 23.3593C10.8618 23.0422 10.7156 22.5647 10.6757 21.6865C10.632 20.737 10.6233 20.4517 10.6233 18.0462C10.6233 15.6406 10.6327 15.3562 10.6757 14.4058C10.7156 13.5276 10.863 13.051 10.9854 12.733C11.1491 12.3125 11.3441 12.0124 11.659 11.6969C11.974 11.3814 12.2737 11.1861 12.6949 11.0231C13.0119 10.8994 13.4892 10.7531 14.3672 10.7132C15.3165 10.6695 15.6016 10.6608 18.0054 10.6608C20.4092 10.6608 20.6946 10.6703 21.6447 10.7132C22.5227 10.7532 22.9991 10.9006 23.317 11.0231C23.7374 11.1861 24.0374 11.3818 24.3528 11.6969C24.6682 12.012 24.8628 12.3125 25.0264 12.733C25.1501 13.0501 25.2963 13.5276 25.3362 14.4058C25.3799 15.3562 25.3886 15.6406 25.3886 18.0462C25.3886 20.4517 25.3799 20.7362 25.3362 21.6865C25.2962 22.5647 25.1493 23.0421 25.0264 23.3593C24.8628 23.7799 24.6678 24.0799 24.3528 24.3947C24.0379 24.7095 23.7374 24.9048 23.317 25.0685C23 25.1922 22.5227 25.3385 21.6447 25.3784C20.6954 25.4221 20.4103 25.4308 18.0054 25.4308C15.6005 25.4308 15.3162 25.4221 14.3672 25.3784ZM14.2927 9.09264C13.334 9.13631 12.6789 9.28836 12.1068 9.51104C11.5143 9.741 11.0127 10.0495 10.5115 10.5501C10.0103 11.0506 9.70271 11.5531 9.47282 12.1458C9.25021 12.7184 9.09819 13.3733 9.05454 14.3323C9.01016 15.2927 9 15.5998 9 18.0461C9 20.4924 9.01016 20.7994 9.05454 21.7599C9.09819 22.7189 9.25021 23.3738 9.47282 23.9464C9.70271 24.5387 10.0104 25.0418 10.5115 25.5421C11.0127 26.0424 11.5143 26.3505 12.1068 26.5811C12.68 26.8038 13.334 26.9559 14.2927 26.9995C15.2533 27.0432 15.5598 27.0541 18.0054 27.0541C20.451 27.0541 20.758 27.0439 21.7181 26.9995C22.6769 26.9559 23.3316 26.8038 23.904 26.5811C24.4961 26.3505 24.9981 26.0427 25.4993 25.5421C26.0005 25.0416 26.3074 24.5387 26.538 23.9464C26.7606 23.3738 26.9133 22.7189 26.9563 21.7599C26.9999 20.7987 27.0101 20.4924 27.0101 18.0461C27.0101 15.5998 26.9999 15.2927 26.9563 14.3323C26.9126 13.3732 26.7606 12.718 26.538 12.1458C26.3074 11.5535 25.9997 11.0514 25.4993 10.5501C24.9988 10.0487 24.4961 9.741 23.9047 9.51104C23.3316 9.28836 22.6768 9.13559 21.7189 9.09264C20.7587 9.04897 20.4517 9.03809 18.0061 9.03809C15.5605 9.03809 15.2533 9.04825 14.2927 9.09264Z" />
+                      <path d="M15.0041 18.0461C15.0041 16.3878 16.3476 15.0432 18.0054 15.0432C19.6632 15.0432 21.0074 16.3878 21.0074 18.0461C21.0074 19.7043 19.6632 21.049 18.0054 21.049C16.3476 21.049 15.0041 19.7043 15.0041 18.0461ZM13.3812 18.0461C13.3812 20.6008 15.4515 22.6716 18.0054 22.6716C20.5593 22.6716 22.6296 20.6008 22.6296 18.0461C22.6296 15.4914 20.5593 13.4206 18.0054 13.4206C15.4515 13.4206 13.3812 15.4914 13.3812 18.0461ZM21.732 13.2372C21.7319 13.451 21.7952 13.66 21.9139 13.8378C22.0325 14.0156 22.2013 14.1542 22.3987 14.2361C22.5961 14.318 22.8134 14.3395 23.023 14.2979C23.2327 14.2563 23.4253 14.1534 23.5765 14.0023C23.7276 13.8512 23.8306 13.6586 23.8724 13.4489C23.9142 13.2393 23.8929 13.0219 23.8112 12.8243C23.7295 12.6268 23.591 12.4579 23.4134 12.3391C23.2357 12.2202 23.0268 12.1567 22.8131 12.1567H22.8126C22.5261 12.1568 22.2514 12.2707 22.0488 12.4733C21.8462 12.6759 21.7322 12.9506 21.732 13.2372ZM14.3672 25.3784C13.4892 25.3384 13.012 25.1921 12.6949 25.0685C12.2744 24.9048 11.9744 24.7098 11.659 24.3947C11.3436 24.0796 11.1484 23.7799 10.9854 23.3593C10.8618 23.0422 10.7156 22.5647 10.6757 21.6865C10.632 20.737 10.6233 20.4517 10.6233 18.0462C10.6233 15.6406 10.6327 15.3562 10.6757 14.4058C10.7156 13.5276 10.863 13.051 10.9854 12.733C11.1491 12.3125 11.3441 12.0124 11.659 11.6969C11.974 11.3814 12.2737 11.1861 12.6949 11.0231C13.0119 10.8994 13.4892 10.7531 14.3672 10.7132C15.3165 10.6695 15.6016 10.6608 18.0054 10.6608C20.4092 10.6608 20.6946 10.6703 21.6447 10.7132C22.5227 10.7532 22.9991 10.9006 23.317 11.0231C23.7374 11.1861 24.0374 11.3818 24.3528 11.6969C24.6682 12.012 24.8628 12.3125 25.0264 12.733C25.1501 13.0501 25.2963 13.5276 25.3362 14.4058C25.3799 15.3562 25.3886 15.6406 25.3886 18.0462C25.3886 20.4517 25.3799 20.7362 25.3362 21.6865C25.2962 22.5647 25.1493 23.0421 25.0264 23.3593C24.8628 23.7799 24.6678 24.0799 24.3528 24.3947C24.0379 24.7095 23.7374 24.9048 23.317 25.0685C23 25.1922 22.5227 25.3385 21.6447 25.3784C20.6954 25.4221 20.4103 25.4308 18.0054 25.4308C15.6005 25.4308 15.3162 25.4221 14.3672 25.3784ZM14.2927 9.09264C13.334 9.13631 12.6789 9.28836 12.1068 9.51104C11.5143 9.741 11.0127 10.0495 10.5115 10.5501C10.0103 11.0506 9.70271 11.5531 9.47282 12.1458C9.25021 12.7184 9.09819 13.3733 9.05454 14.3323C9.01016 15.2927 9 15.5998 9 18.0461C9 20.4924 9.01016 20.7994 9.05454 21.7599C9.09819 22.7189 9.25021 23.3738 9.47282 23.9464C9.70271 24.5387 10.0104 25.0418 10.5115 25.5421C11.0127 26.0424 11.5143 26.3505 12.1068 26.5811C12.68 26.8038 13.334 26.9559 14.2927 26.9995C15.2533 27.0432 15.5598 27.0541 18.0054 27.0541C20.451 27.0541 20.758 27.0439 21.7181 26.9995C22.6769 26.9559 23.3316 26.8038 23.904 26.5811C24.4961 26.3505 24.9981 26.0427 25.4993 25.5421C26.0005 25.0416 26.3074 24.5387 26.538 23.9464C26.7606 23.3738 26.9133 22.7189 26.9563 21.7599C26.9999 20.7987 27.0101 20.4924 27.0101 18.0461C27.0101 15.5998 26.9999 15.2927 26.9563 14.3323C26.9126 13.3732 26.7606 12.718 26.538 12.1458C26.3074 11.5535 25.9997 11.0514 25.4993 10.5501C24.9988 10.0487 24.4961 9.741 23.9047 9.51104C23.3316 9.28836 22.6768 9.13559 21.7189 9.09264C20.7587 9.04897 20.4517 9.03809 18.0061 9.03809C15.5605 9.03809 15.2533 9.04825 14.2927 9.09264Z" />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" target="_blank" rel="nofollow">
+                    <svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M13.8593 25.2948V15.5702H10.6298V25.2948H13.8596H13.8593ZM12.2452 14.2426C13.3711 14.2426 14.0721 13.4959 14.0721 12.5627C14.051 11.6082 13.3711 10.8823 12.2666 10.8823C11.1613 10.8823 10.4395 11.6082 10.4395 12.5626C10.4395 13.4958 11.1402 14.2426 12.224 14.2426H12.245L12.2452 14.2426ZM15.6468 25.2948H18.876V19.8647C18.876 19.5744 18.8971 19.2834 18.9824 19.0761C19.2157 18.4952 19.7471 17.8938 20.6394 17.8938C21.8077 17.8938 22.2753 18.7855 22.2753 20.0929V25.2948H25.5044V19.719C25.5044 16.7321 23.9115 15.3422 21.7868 15.3422C20.0448 15.3422 19.2798 16.3166 18.8548 16.9803H18.8763V15.5705H15.647C15.6891 16.4828 15.6467 25.2951 15.6467 25.2951L15.6468 25.2948Z" />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="author__text">
+              <p>Online casinos in Malaysia are quickly gaining popularity especially over the last few years due to the COVID-19 pandemic. As the country went into lockdown after lockdown, many Malaysians are left with no choice but to turn to online casinos for their favorite casino games.</p>
+              <p>In this article, we will be sharing some of the best legal online casinos that come fully recommended due to their excellent reputation and credibility. </p>
+            </div>
+            <div class="author__news">
+              <div class="author__news-title">Latest Article from Author</div>
+              <div class="news-list">
+                <div class="news-item news-item--mobile-row">
+                  <a href="#" class="news-item__img">
+                    <img src="data/news.jpg" width="392" height="249" alt="news">
+                  </a>
+                  <div class="news-item__box">
+                    <div class="news-item__box-top">
+                      <a href="#" class="news-item__title" title="Future of Work">Future of Work</a>
+                      <div class="news-item__text">Majority of peole will work in jobs that don’t exist today.</div>
+                    </div>
+                    <div class="news-item__box-bottom">
+                      <div class="news-item__author">
+                        <div class="news-item__author-img">
+                          <img src="data/Johanna-Murray.jpg" width="40" height="40" alt="Johanna-Murray">
+                        </div>
+                        <div class="news-item__author-box">
+                          <div class="news-item__author-name">Johanna Murray</div>
+                          <div class="news-item__date">02 May</div>
+                        </div>
+                      </div>
+                      <div class="news-item__right">
+                        <div class="news-item__type">Provider</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="news-item news-item--mobile-row">
+                  <a href="#" class="news-item__img">
+                    <img src="data/news.jpg" width="392" height="249" alt="news">
+                  </a>
+                  <div class="news-item__box">
+                    <div class="news-item__box-top">
+                      <a href="#" class="news-item__title" title="Cheap Airline Tickets Great Ways To Save">Cheap Airline Tickets Great Ways To Save</a>
+                      <div class="news-item__text">Majority of peole will work in jobs that don’t exist today.</div>
+                    </div>
+                    <div class="news-item__box-bottom">
+                      <div class="news-item__author">
+                        <div class="news-item__author-img">
+                          <img src="data/Johanna-Murray.jpg" width="40" height="40" alt="Johanna-Murray">
+                        </div>
+                        <div class="news-item__author-box">
+                          <div class="news-item__author-name">Johanna Murray</div>
+                          <div class="news-item__date">02 May</div>
+                        </div>
+                      </div>
+                      <div class="news-item__right">
+                        <div class="news-item__type">Provider</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="news-item news-item--mobile-row">
+                  <a href="#" class="news-item__img">
+                    <img src="data/news.jpg" width="392" height="249" alt="news">
+                  </a>
+                  <div class="news-item__box">
+                    <div class="news-item__box-top">
+                      <a href="#" class="news-item__title" title="Future of Work">Future of Work</a>
+                      <div class="news-item__text">Majority of peole will work in jobs that don’t exist today.</div>
+                    </div>
+                    <div class="news-item__box-bottom">
+                      <div class="news-item__author">
+                        <div class="news-item__author-img">
+                          <img src="data/Johanna-Murray.jpg" width="40" height="40" alt="Johanna-Murray">
+                        </div>
+                        <div class="news-item__author-box">
+                          <div class="news-item__author-name">Johanna Murray</div>
+                          <div class="news-item__date">02 May</div>
+                        </div>
+                      </div>
+                      <div class="news-item__right">
+                        <div class="news-item__type">Provider</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="news-item news-item--mobile-row">
+                  <a href="#" class="news-item__img">
+                    <img src="data/news.jpg" width="392" height="249" alt="news">
+                  </a>
+                  <div class="news-item__box">
+                    <div class="news-item__box-top">
+                      <a href="#" class="news-item__title" title="Future of Work">Future of Work</a>
+                      <div class="news-item__text">Majority of peole will work in jobs that don’t exist today.</div>
+                    </div>
+                    <div class="news-item__box-bottom">
+                      <div class="news-item__author">
+                        <div class="news-item__author-img">
+                          <img src="data/Johanna-Murray.jpg" width="40" height="40" alt="Johanna-Murray">
+                        </div>
+                        <div class="news-item__author-box">
+                          <div class="news-item__author-name">Johanna Murray</div>
+                          <div class="news-item__date">02 May</div>
+                        </div>
+                      </div>
+                      <div class="news-item__right">
+                        <div class="news-item__type">Provider</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="news-item news-item--mobile-row">
+                  <a href="#" class="news-item__img">
+                    <img src="data/news.jpg" width="392" height="249" alt="news">
+                  </a>
+                  <div class="news-item__box">
+                    <div class="news-item__box-top">
+                      <a href="#" class="news-item__title" title="Cheap Airline Tickets Great Ways To Save">Cheap Airline Tickets Great Ways To Save</a>
+                      <div class="news-item__text">Majority of peole will work in jobs that don’t exist today.</div>
+                    </div>
+                    <div class="news-item__box-bottom">
+                      <div class="news-item__author">
+                        <div class="news-item__author-img">
+                          <img src="data/Johanna-Murray.jpg" width="40" height="40" alt="Johanna-Murray">
+                        </div>
+                        <div class="news-item__author-box">
+                          <div class="news-item__author-name">Johanna Murray</div>
+                          <div class="news-item__date">02 May</div>
+                        </div>
+                      </div>
+                      <div class="news-item__right">
+                        <div class="news-item__type">Provider</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="news-item news-item--mobile-row">
+                  <a href="#" class="news-item__img">
+                    <img src="data/news.jpg" width="392" height="249" alt="news">
+                  </a>
+                  <div class="news-item__box">
+                    <div class="news-item__box-top">
+                      <a href="#" class="news-item__title" title="Future of Work">Future of Work</a>
+                      <div class="news-item__text">Majority of peole will work in jobs that don’t exist today.</div>
+                    </div>
+                    <div class="news-item__box-bottom">
+                      <div class="news-item__author">
+                        <div class="news-item__author-img">
+                          <img src="data/Johanna-Murray.jpg" width="40" height="40" alt="Johanna-Murray">
+                        </div>
+                        <div class="news-item__author-box">
+                          <div class="news-item__author-name">Johanna Murray</div>
+                          <div class="news-item__date">02 May</div>
+                        </div>
+                      </div>
+                      <div class="news-item__right">
+                        <div class="news-item__type">Provider</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="news-item news-item--mobile-row">
+                  <a href="#" class="news-item__img">
+                    <img src="data/news.jpg" width="392" height="249" alt="news">
+                  </a>
+                  <div class="news-item__box">
+                    <div class="news-item__box-top">
+                      <a href="#" class="news-item__title" title="Future of Work">Future of Work</a>
+                      <div class="news-item__text">Majority of peole will work in jobs that don’t exist today.</div>
+                    </div>
+                    <div class="news-item__box-bottom">
+                      <div class="news-item__author">
+                        <div class="news-item__author-img">
+                          <img src="data/Johanna-Murray.jpg" width="40" height="40" alt="Johanna-Murray">
+                        </div>
+                        <div class="news-item__author-box">
+                          <div class="news-item__author-name">Johanna Murray</div>
+                          <div class="news-item__date">02 May</div>
+                        </div>
+                      </div>
+                      <div class="news-item__right">
+                        <div class="news-item__type">Provider</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="news-item news-item--mobile-row">
+                  <a href="#" class="news-item__img">
+                    <img src="data/news.jpg" width="392" height="249" alt="news">
+                  </a>
+                  <div class="news-item__box">
+                    <div class="news-item__box-top">
+                      <a href="#" class="news-item__title" title="Cheap Airline Tickets Great Ways To Save">Cheap Airline Tickets Great Ways To Save</a>
+                      <div class="news-item__text">Majority of peole will work in jobs that don’t exist today.</div>
+                    </div>
+                    <div class="news-item__box-bottom">
+                      <div class="news-item__author">
+                        <div class="news-item__author-img">
+                          <img src="data/Johanna-Murray.jpg" width="40" height="40" alt="Johanna-Murray">
+                        </div>
+                        <div class="news-item__author-box">
+                          <div class="news-item__author-name">Johanna Murray</div>
+                          <div class="news-item__date">02 May</div>
+                        </div>
+                      </div>
+                      <div class="news-item__right">
+                        <div class="news-item__type">Provider</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="news-item news-item--mobile-row">
+                  <a href="#" class="news-item__img">
+                    <img src="data/news.jpg" width="392" height="249" alt="news">
+                  </a>
+                  <div class="news-item__box">
+                    <div class="news-item__box-top">
+                      <a href="#" class="news-item__title" title="Future of Work">Future of Work</a>
+                      <div class="news-item__text">Majority of peole will work in jobs that don’t exist today.</div>
+                    </div>
+                    <div class="news-item__box-bottom">
+                      <div class="news-item__author">
+                        <div class="news-item__author-img">
+                          <img src="data/Johanna-Murray.jpg" width="40" height="40" alt="Johanna-Murray">
+                        </div>
+                        <div class="news-item__author-box">
+                          <div class="news-item__author-name">Johanna Murray</div>
+                          <div class="news-item__date">02 May</div>
+                        </div>
+                      </div>
+                      <div class="news-item__right">
+                        <div class="news-item__type">Provider</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <ul class="pagination">
+                <li class="disabled">
+                  <a href="#">
+                    <svg width="6" height="10" viewBox="0 0 6 10" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M5.25742 0.59165C4.93242 0.26665 4.40742 0.26665 4.08242 0.59165L0.257422 4.41665C-0.0675781 4.74165 -0.0675781 5.26665 0.257422 5.59165L4.08242 9.41665C4.40742 9.74165 4.93242 9.74165 5.25742 9.41665C5.58242 9.09165 5.58242 8.56665 5.25742 8.24165L2.02409 4.99998L5.25742 1.76665C5.58242 1.44165 5.57409 0.908317 5.25742 0.59165Z" />
+                    </svg>
+                  </a>
+                </li>
+                <li><span>1</span></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li>
+                  <a href="#">
+                    <svg width="6" height="10" viewBox="0 0 6 10" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M0.74375 0.244802C0.41875 0.569802 0.41875 1.0948 0.74375 1.4198L3.97708 4.65314L0.74375 7.88647C0.41875 8.21147 0.41875 8.73647 0.74375 9.06147C1.06875 9.38647 1.59375 9.38647 1.91875 9.06147L5.74375 5.23647C6.06875 4.91147 6.06875 4.38647 5.74375 4.06147L1.91875 0.236468C1.60208 -0.0801982 1.06875 -0.0801982 0.74375 0.244802Z" />
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% include 'footer.html' %}
+    {% include 'popup.html' %}
+    {% include 'js.html' %}
+  </body>
+</html>

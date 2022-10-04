@@ -30,7 +30,31 @@
     }
     svg {
       fill: #fff;
+      height: auto;
       transition: 0.3s ease-in-out;
+    }
+  }
+  &--black {
+    li {
+      @include response(1200px) {
+        margin-right: 8px;
+      }
+    }
+    a {
+      @include response(1200px) {
+        width: 20px;
+        height: 20px;
+      }
+      @include desktop-hover() {
+        background: #183b56;
+        border-color: #183b56;
+        svg {
+          fill: #fff;
+        }
+      }
+      svg {
+        fill: #183b56;
+      }
     }
   }
 }
