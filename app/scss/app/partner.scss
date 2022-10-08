@@ -112,7 +112,9 @@
   }
   &__box-img {
     display: flex;
-    max-width: 160px;
+    @include response(1200px) {
+      max-width: 160px;
+    }
   }
   &__nav-holder {
     position: relative;

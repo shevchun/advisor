@@ -64,7 +64,6 @@
     "gulp-zip": "^4.1.0",
     "gulp.spritesmith": "^6.10.1",
     "image-size": "^0.6.2",
-    "imagemin-pngquant": "^5.0.1",
     "postcss-flexbugs-fixes": "^3.3.0",
     "prettier": "^1.10.2",
     "require-dir": "^0.3.2",

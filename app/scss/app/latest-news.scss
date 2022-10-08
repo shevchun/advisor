@@ -18,6 +18,7 @@
     position: relative;
   }
 }
+
 .news-list {
   position: relative;
   display: flex;
@@ -27,6 +28,7 @@
     margin-left: -24px;
   }
 }
+
 .news-item {
   position: relative;
   flex: 0 0 calc(33.333% - 32px);
@@ -175,6 +177,11 @@
     display: flex;
     align-items: center;
     overflow: auto;
+    text-decoration: none;
+    color: #183b56;
+    @include desktop-hover() {
+      text-decoration: underline;
+    }
     @include response(1200px) {
       .news-item--mobile-row & {
         margin-right: 0;
@@ -244,5 +251,180 @@
         font-size: 12px;
       }
     }
+  }
+}
+
+.news-item-row {
+  position: relative;
+  display: flex;
+  background: #fff;
+  border: 1px solid #e1e1e7;
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.06);
+  border-radius: 12px;
+  flex: 0 0 calc(50% - 32px);
+  max-width: calc(50% - 32px);
+  width: 100%;
+  margin-left: 32px;
+  margin-bottom: 32px;
+  overflow: hidden;
+  @include response(1200px) {
+    flex: 0 0 calc(100% - 24px);
+    max-width: calc(100% - 24px);
+    margin-left: 24px;
+    margin-bottom: 24px;
+  }
+  &__img {
+    position: relative;
+    flex: 0 0 269px;
+    width: 269px;
+    overflow: hidden;
+    @include response(1200px) {
+      flex: 0 0 121px;
+      width: 121px;
+    }
+    @include desktop-hover() {
+      img {
+        transform: scale(1.03);
+      }
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.6s ease-in-out;
+    }
+  }
+  &__box {
+    position: relative;
+    padding: 16px 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: auto;
+    @include response(1200px) {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
+  &__top {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    @include response(1200px) {
+      margin-bottom: 8px;
+    }
+  }
+  &__type {
+    position: relative;
+    padding: 2px 8px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+    background: #f8fafd;
+    border: 1px solid #e1e1e7;
+    border-radius: 4px;
+    margin-right: 12px;
+    @include response(1200px) {
+      font-size: 12px;
+    }
+  }
+  &__date-mobile {
+    display: none;
+    @include response(1200px) {
+      display: block;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 24px;
+      color: #5a7184;
+    }
+  }
+  &__title {
+    display: block;
+    text-decoration: none;
+    font-family: "Domine";
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 150%;
+    color: #183b56;
+    max-height: 66px;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    display: box;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    margin-bottom: 8px;
+    @include response(1200px) {
+      font-size: 14px;
+      line-height: 20px;
+      max-height: 60px;
+      -webkit-line-clamp: 3;
+      margin-bottom: 0;
+    }
+    @include desktop-hover() {
+      text-decoration: underline;
+    }
+  }
+  &__text {
+    margin-bottom: 28px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    max-height: 42px;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    display: box;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    @include response(1200px) {
+      display: none;
+    }
+    p {
+      margin: 0;
+    }
+  }
+  &__author {
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #183b56;
+    @include response(1200px) {
+      display: none;
+    }
+    @include desktop-hover() {
+      text-decoration: underline;
+    }
+  }
+  &__author-img {
+    position: relative;
+    flex: 0 0 40px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 12px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__author-box {
+    position: relative;
+    overflow: auto;
+  }
+  &__author-name {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    margin-bottom: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  &__date {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
   }
 }
