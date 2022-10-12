@@ -2,7 +2,12 @@ import $ from 'jquery'
 
 export default () => {
 
-  $('.accordion__item-head').on('click', function faqItem() {
+  $('.general-info__accordion-item-head').on('click', function generalItem() {
+    $(this).parents('.general-info__accordion-item').toggleClass('active')
+    $(this).siblings('.general-info__accordion-item-body').slideToggle()
+  })
+
+  $('.accordion__item-head').on('click', function accordionItem() {
     $(this).parents('.accordion__item').toggleClass('active')
     $(this).siblings('.accordion__item-body').slideToggle()
   })
