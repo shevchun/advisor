@@ -2,6 +2,13 @@ import $ from 'jquery'
 
 export default () => {
 
+  $('.faq__item-head').on('click', function faqItem() {
+    $(this).parents('.faq__item').toggleClass('active')
+    $(this).siblings('.faq__item-body').slideToggle()
+  })
+
+  if ($('.js-sticky').length) $('.wrapper').addClass('wrapper--ovv')
+
   if ($(window).width() < 1200) {
     $('.we-rate__nav-row').on('click', function clickDownScroll() {
       const marginTop = 60

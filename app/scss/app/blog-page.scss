@@ -1,0 +1,93 @@
+.blog-page {
+  position: relative;
+  &__box {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    @include response(1200px) {
+      display: block;
+    }
+  }
+  &__content {
+    position: relative;
+    flex: 0 0 842px;
+    max-width: 842px;
+    width: 100%;
+    @include response(1200px) {
+      max-width: 100%;
+    }
+  }
+  &__text {
+    position: relative;
+    margin-bottom: 40px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__aside {
+    position: relative;
+    position: sticky;
+    top: 80px;
+    flex: 0 0 362px;
+    max-width: 362px;
+    width: 100%;
+    border: 1px solid #e1e1e7;
+    border-radius: 12px;
+    overflow: hidden;
+    @include response(1200px) {
+      display: none;
+    }
+  }
+  &__aside-box {
+    position: relative;
+  }
+  &__aside-row {
+    position: relative;
+    & + .blog-page__aside-row {
+      border-top: 1px solid #e1e1e7;
+    }
+  }
+  &__aside-row-title {
+    position: relative;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150%;
+    padding: 24px 25px 8px;
+  }
+  &__aside-list {
+    position: relative;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  &__aside-list-item {
+    position: relative;
+    border-bottom: 1px solid #e1e1e7;
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+  &__aside-list-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 16px 24px;
+    transition: 0.3s ease-in-out;
+    @include desktop-hover() {
+      background: #f8fafd;
+    }
+    img {
+      position: relative;
+      flex: 0 0 36px;
+      width: 36px;
+      margin-right: 20px;
+    }
+    span {
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 150%;
+      color: #183b56;
+    }
+  }
+}

@@ -6,6 +6,11 @@
   align-items: center;
   @include response(1200px) {
     margin-bottom: 24px;
+    overflow-x: auto;
+    margin-left: -24px;
+    margin-right: -24px;
+    padding-left: 24px;
+    padding-right: 24px;
   }
   li {
     position: relative;

@@ -1,0 +1,112 @@
+.faq {
+  position: relative;
+  &__title {
+    margin: 0 0 36px;
+    position: relative;
+    font-family: "Domine";
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 150%;
+    display: flex;
+    align-items: center;
+    @include response(1200px) {
+      font-size: 22px;
+    }
+    svg {
+      flex: 0 0 auto;
+      margin-right: 20px;
+    }
+  }
+  &__list {
+    position: relative;
+  }
+  &__item {
+    position: relative;
+    margin-bottom: 36px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__item-head {
+    position: relative;
+    background: #183b56;
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    border-radius: 8px;
+    color: #fff;
+    transition: 0.3s ease-in-out;
+    @include response(1200px) {
+      align-items: flex-start;
+    }
+    .faq__item.active & {
+      border-radius: 8px 8px 0 0;
+    }
+    @include desktop-hover() {
+      color: #ffcc00;
+      .faq__item-head-btn {
+        background: #ffcc00;
+      }
+    }
+  }
+  &__item-head-title {
+    position: relative;
+    flex: 1 1 auto;
+    padding-right: 20px;
+    font-family: "Domine";
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 150%;
+    @include response(1200px) {
+      font-size: 16px;
+    }
+  }
+  &__item-head-btn {
+    position: relative;
+    flex: 0 0 20px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgba(#fff, 0.4);
+    transition: 0.3s ease-in-out;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 10px;
+      height: 2px;
+      top: 50%;
+      left: 50%;
+      margin-top: -1px;
+      margin-left: -5px;
+      background: #fff;
+      border-radius: 3px;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      height: 10px;
+      width: 2px;
+      top: 50%;
+      left: 50%;
+      margin-top: -5px;
+      margin-left: -1px;
+      background: #fff;
+      border-radius: 3px;
+      transition: 0.3s ease-in-out;
+    }
+    .faq__item.active & {
+      &::after {
+        transform: rotate(90deg);
+      }
+    }
+  }
+  &__item-body {
+    border: 1px solid #e1e1e7;
+    border-radius: 0 0 8px 8px;
+    position: relative;
+    padding: 24px;
+    display: none;
+  }
+}
