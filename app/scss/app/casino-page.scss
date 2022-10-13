@@ -1,0 +1,294 @@
+.casino-page {
+  position: relative;
+  padding-bottom: 160px;
+  @include response(1200px) {
+    padding-bottom: 40px;
+  }
+  &__legend {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: -115px;
+    margin-bottom: 60px;
+    @include response(1200px) {
+      margin-bottom: 40px;
+      margin-top: -90px;
+      display: block;
+    }
+  }
+  &__legend-item {
+    position: relative;
+    flex: 0 0 265px;
+    max-width: 265px;
+    width: 100%;
+    padding: 24px;
+    background: #fff;
+    border: 1px solid;
+    border-radius: 8px;
+    margin-left: 18px;
+    margin-right: 18px;
+    text-align: center;
+    @include response(1200px) {
+      max-width: 60%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 24px;
+    }
+    @include response(767px) {
+      max-width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+  }
+  &__legend-item-img {
+    margin-bottom: 8px;
+    @include response(767px) {
+      margin-right: 8px;
+    }
+  }
+  &__legend-item-title {
+    font-family: "Domine";
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 150%;
+    margin-bottom: 12px;
+    @include response(1200px) {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+  }
+  &__legend-item-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: #183b56;
+    @include response(767px) {
+      flex: 0 0 100%;
+    }
+  }
+  &__controls {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 48px;
+    @include response(1200px) {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: inherit;
+    }
+  }
+  &__controls-filter-btn {
+    position: relative;
+    flex: 0 0 auto;
+    margin-right: 24px;
+    padding: 11px 24px;
+    border: 1px solid #000066;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    transition: 0.3s ease-in-out;
+    @include response(1200px) {
+      order: 2;
+      margin-right: 12px;
+    }
+    @include desktop-hover() {
+      background: #ffcc00;
+      border-color: #ffcc00;
+    }
+    svg {
+      flex: 0 0 auto;
+      margin-left: 8px;
+    }
+  }
+  &__form {
+    position: relative;
+    flex: 0 0 556px;
+    max-width: 556px;
+    width: 100%;
+    margin-right: auto;
+    @include response(1200px) {
+      order: 1;
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-bottom: 24px;
+      margin-right: 0;
+      .form {
+        max-width: 100%;
+      }
+    }
+  }
+  &__controls-sort {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+    @include response(1200px) {
+      order: 3;
+    }
+  }
+  &__list {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -24px;
+    margin-bottom: 10px;
+    @include response(1200px) {
+      margin-left: -16px;
+    }
+  }
+  &__item {
+    position: relative;
+    flex: 0 0 calc(20% - 24px);
+    max-width: calc(20% - 24px);
+    width: 100%;
+    background: #fff;
+    border: 1px solid #e1e1e7;
+    border-radius: 12px;
+    margin-left: 24px;
+    margin-bottom: 24px;
+    color: #183b56;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.2s ease-in-out;
+    @include response(1200px) {
+      flex: 0 0 calc(33.333% - 16px);
+      max-width: calc(33.333% - 16px);
+      margin-left: 16px;
+    }
+    @include response(767px) {
+      flex: 0 0 calc(50% - 16px);
+      max-width: calc(50% - 16px);
+    }
+    @include desktop-hover() {
+      border-color: #183b56;
+      transform: translateY(-3px);
+      .casino-page__item-box {
+        border-top-color: #183b56;
+      }
+    }
+  }
+  &__item-img {
+    position: relative;
+    height: 156px;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include response(1200px) {
+      height: 108px;
+    }
+    img {
+      max-height: 100%;
+    }
+  }
+  &__item-box {
+    position: relative;
+    background: #f8fafd;
+    padding: 20px;
+    border-top: 1px solid #e1e1e7;
+    transition: 0.3s ease-in-out;
+    @include response(1200px) {
+      padding: 12px;
+    }
+  }
+  &__item-title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 150%;
+    text-align: center;
+    margin-bottom: 16px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    @include response(767px) {
+      font-size: 14px;
+      max-height: 42px;
+      white-space: initial;
+      -webkit-line-clamp: 2;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      margin-bottom: 12px;
+    }
+  }
+  &__item-label-box {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 8px;
+  }
+  &__item-label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3px 12px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 150%;
+    border: 1px solid;
+    img {
+      flex: 0 0 auto;
+      margin-right: 10px;
+    }
+  }
+  &__item-rate {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__item-rate-value {
+    flex: 0 0 auto;
+    margin-right: 8px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 150%;
+    color: #cb0101;
+    @include response(1200px) {
+      font-size: 14px;
+    }
+  }
+  &__item-rate-stars {
+    position: relative;
+    flex: 0 0 auto;
+  }
+  &__bottom {
+    position: relative;
+    max-width: 842px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__info {
+    padding: 36px 24px;
+    background: #f8fafd;
+    border: 1px solid #e1e1e7;
+    border-radius: 8px;
+    position: relative;
+    text-align: center;
+    margin-bottom: 60px;
+    @include response(1200px) {
+      text-align: left;
+    }
+  }
+  &__info-title {
+    font-family: "Domine";
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 150%;
+    margin-bottom: 12px;
+    @include response(1200px) {
+      font-size: 18px;
+    }
+  }
+}

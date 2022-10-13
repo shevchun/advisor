@@ -16,6 +16,20 @@
       flex: 0 0 auto;
       margin-right: 20px;
     }
+    &--center {
+      justify-content: center;
+      margin-bottom: 20px;
+      @include response(1200px) {
+        justify-content: flex-start;
+      }
+    }
+  }
+  &__descriptions {
+    text-align: center;
+    margin-bottom: 36px;
+    @include response(1200px) {
+      text-align: left;
+    }
   }
   &__list {
     position: relative;
@@ -108,5 +122,11 @@
     position: relative;
     padding: 24px;
     display: none;
+    &--center {
+      text-align: center;
+      @include response(1200px) {
+        text-align: left;
+      }
+    }
   }
 }
