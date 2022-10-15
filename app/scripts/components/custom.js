@@ -2,6 +2,25 @@ import $ from 'jquery'
 
 export default () => {
 
+  $('.js-filter-btn').on('click', () => {
+    $('.casino-filter').addClass('active')
+  })
+
+  $('.js-close-filter').on('click', () => {
+    $('.casino-filter').removeClass('active')
+  })
+
+  $('.casino-filter__checkbox').each((index, element) => {
+    const items = $(element).find('.casino-filter__checkbox-item').length
+    if (items > 12) {
+      $(element).addClass('active-show-more')
+    }
+  })
+
+  $('.casino-filter__show-btn').on('click', function showMore() {
+    $(this).parents('.casino-filter__checkbox').toggleClass('show-more')
+  })
+
   function isFloat(value) {
     return typeof value === 'number' &&
       !Number.isNaN(value) &&

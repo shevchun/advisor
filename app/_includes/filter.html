@@ -1,0 +1,534 @@
+<div class="casino-filter">
+  <div class="casino-filter__overlay js-close-filter"></div>
+  <div class="casino-filter__holder">
+    <form class="casino-filter__form">
+      <div class="casino-filter__head">
+        <div class="casino-filter__title">Filter</div>
+        <div class="casino-filter__close js-close-filter">
+          <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.16602 1.66663L12.8319 13.3325" stroke="#183B56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M1.16615 13.3325L12.832 1.66663" stroke="#183B56" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+      <div class="casino-filter__body">
+        <div class="casino-filter__item">
+          <div class="casino-filter__item-title">Reputation</div>
+          <div class="casino-filter__reputation">
+            <label class="casino-filter__reputation-item">
+              <input type="checkbox">
+              <span style="background: #306F46; color: #306F46;">
+                <img src="data/like.svg" width="16" height="16" alt="like">
+                Approved
+              </span>
+            </label>
+            <label class="casino-filter__reputation-item">
+              <input type="checkbox">
+              <span style="background: #CCA300; color: #CCA300;">
+                <img src="data/medal-star.svg" width="16" height="16" alt="medal-star">
+                Awarded
+              </span>
+            </label>
+            <label class="casino-filter__reputation-item">
+              <input type="checkbox">
+              <span style="background: #000; color: #000;">
+                <img src="data/shield-slash.svg" width="16" height="16" alt="shield-slash">
+                Blacklisted
+              </span>
+            </label>
+            <label class="casino-filter__reputation-item">
+              <input type="checkbox">
+              <span style="background: #A20101; color: #A20101;">
+                <img src="data/warning-2.svg" width="16" height="16" alt="warning-2">
+                Restricted
+              </span>
+            </label>
+          </div>
+        </div>
+        <div class="casino-filter__item">
+          <div class="casino-filter__item-title">Ratings</div>
+          <div class="casino-filter__checkbox-full">
+            <label class="casino-filter__checkbox-full-item">
+              <input type="checkbox">
+              <span><span>4.7+</span> - Very Good</span>
+            </label>
+            <label class="casino-filter__checkbox-full-item">
+              <input type="checkbox">
+              <span><span>4.5</span> - Good</span>
+            </label>
+            <label class="casino-filter__checkbox-full-item">
+              <input type="checkbox">
+              <span><span>4.0</span> - Decent</span>
+            </label>
+          </div>
+        </div>
+        <div class="casino-filter__item">
+          <div class="casino-filter__item-title">Deposit Menthod</div>
+          <div class="casino-filter__checkbox">
+            <div class="casino-filter__checkbox-list">
+              <label class="casino-filter__checkbox-item">
+                <input type="checkbox">
+                <span>
+                  <svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 0.5C8.405 0.5 8.0925 0.64 7.86625 0.86625L6.61625 2.11625L3.75 4.9825L2.13375 3.36625C1.9075 3.14 1.595 3 1.25 3C0.56 3 0 3.56 0 4.25C0 4.595 0.14 4.9075 0.36625 5.13375L2.86625 7.63375C3.0925 7.86 3.405 8 3.75 8C4.095 8 4.4075 7.86 4.63375 7.63375L8.38375 3.88375L9.63375 2.63375C9.86 2.4075 10 2.095 10 1.75C10 1.05937 9.44 0.5 8.75 0.5Z" /></svg>
+                  Skrill
+                </span>
+              </label>
+              <label class="casino-filter__checkbox-item">
+                <input type="checkbox">
+                <span>
+                  <svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 0.5C8.405 0.5 8.0925 0.64 7.86625 0.86625L6.61625 2.11625L3.75 4.9825L2.13375 3.36625C1.9075 3.14 1.595 3 1.25 3C0.56 3 0 3.56 0 4.25C0 4.595 0.14 4.9075 0.36625 5.13375L2.86625 7.63375C3.0925 7.86 3.405 8 3.75 8C4.095 8 4.4075 7.86 4.63375 7.63375L8.38375 3.88375L9.63375 2.63375C9.86 2.4075 10 2.095 10 1.75C10 1.05937 9.44 0.5 8.75 0.5Z" /></svg>
+                  Skrill
+                </span>
+              </label>
+              <label class="casino-filter__checkbox-item">
+                <input type="checkbox">
+                <span>
+                  <svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 0.5C8.405 0.5 8.0925 0.64 7.86625 0.86625L6.61625 2.11625L3.75 4.9825L2.13375 3.36625C1.9075 3.14 1.595 3 1.25 3C0.56 3 0 3.56 0 4.25C0 4.595 0.14 4.9075 0.36625 5.13375L2.86625 7.63375C3.0925 7.86 3.405 8 3.75 8C4.095 8 4.4075 7.86 4.63375 7.63375L8.38375 3.88375L9.63375 2.63375C9.86 2.4075 10 2.095 10 1.75C10 1.05937 9.44 0.5 8.75 0.5Z" /></svg>
+                  Skrill
+                </span>
+              </label>
+              <label class="casino-filter__checkbox-item">
+                <input type="checkbox">
+                <span>
+                  <svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 0.5C8.405 0.5 8.0925 0.64 7.86625 0.86625L6.61625 2.11625L3.75 4.9825L2.13375 3.36625C1.9075 3.14 1.595 3 1.25 3C0.56 3 0 3.56 0 4.25C0 4.595 0.14 4.9075 0.36625 5.13375L2.86625 7.63375C3.0925 7.86 3.405 8 3.75 8C4.095 8 4.4075 7.86 4.63375 7.63375L8.38375 3.88375L9.63375 2.63375C9.86 2.4075 10 2.095 10 1.75C10 1.05937 9.44 0.5 8.75 0.5Z" /></svg>
+                  Skrill
+                </span>
+              </label>
+              <label class="casino-filter__checkbox-item">
+                <input type="checkbox">
+                <span>
+                  <svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 0.5C8.405 0.5 8.0925 0.64 7.86625 0.86625L6.61625 2.11625L3.75 4.9825L2.13375 3.36625C1.9075 3.14 1.595 3 1.25 3C0.56 3 0 3.56 0 4.25C0 4.595 0.14 4.9075 0.36625 5.13375L2.86625 7.63375C3.0925 7.86 3.405 8 3.75 8C4.095 8 4.4075 7.86 4.63375 7.63375L8.38375 3.88375L9.63375 2.63375C9.86 2.4075 10 2.095 10 1.75C10 1.05937 9.44 0.5 8.75 0.5Z" /></svg>
+                  Visa
+                </span>
+              </label>
+              <label class="casino-filter__checkbox-item">
+                <input type="checkbox">
+                <span>
+                  <svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 0.5C8.405 0.5 8.0925 0.64 7.86625 0.86625L6.61625 2.11625L3.75 4.9825L2.13375 3.36625C1.9075 3.14 1.595 3 1.25 3C0.56 3 0 3.56 0 4.25C0 4.595 0.14 4.9075 0.36625 5.13375L2.86625 7.63375C3.0925 7.86 3.405 8 3.75 8C4.095 8 4.4075 7.86 4.63375 7.63375L8.38375 3.88375L9.63375 2.63375C9.86 2.4075 10 2.095 10 1.75C10 1.05937 9.44 0.5 8.75 0.5Z" /></svg>
+                  Visa
+                </span>
+              </label>
+              <label class="casino-filter__checkbox-item">
+                <input type="checkbox">
+                <span>
+                  <svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 0.5C8.405 0.5 8.0925 0.64 7.86625 0.86625L6.61625 2.11625L3.75 4.9825L2.13375 3.36625C1.9075 3.14 1.595 3 1.25 3C0.56 3 0 3.56 0 4.25C0 4.595 0.14 4.9075 0.36625 5.13375L2.86625 7.63375C3.0925 7.86 3.405 8 3.75 8C4.095 8 4.4075 7.86 4.63375 7.63375L8.38375 3.88375L9.63375 2.63375C9.86 2.4075 10 2.095 10 1.75C10 1.05937 9.44 0.5 8.75 0.5Z" /></svg>
+                  Visa
+                </span>
+              </label>
+              <label class="casino-filter__checkbox-item">
+                <input type="checkbox">
+                <span>
+                  <svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 0.5C8.405 0.5 8.0925 0.64 7.86625 0.86625L6.61625 2.11625L3.75 4.9825L2.13375 3.36625C1.9075 3.14 1.595 3 1.25 3C0.56 3 0 3.56 0 4.25C0 4.595 0.14 4.9075 0.36625 5.13375L2.86625 7.63375C3.0925 7.86 3.405 8 3.75 8C4.095 8 4.4075 7.86 4.63375 7.63375L8.38375 3.88375L9.63375 2.63375C9.86 2.4075 10 2.095 10 1.75C10 1.05937 9.44 0.5 8.75 0.5Z" /></svg>
+                  Visa
+                </span>
+              </label>
+              <label class="casino-filter__checkbox-item">
+                <input type="checkbox">
+                <span>
+                  <svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 0.5C8.405 0.5 8.0925 0.64 7.86625 0.86625L6.61625 2.11625L3.75 4.9825L2.13375 3.36625C1.9075 3.14 1.595 3 1.25 3C0.56 3 0 3.56 0 4.25C0 4.595 0.14 4.9075 0.36625 5.13375L2.86625 7.63375C3.0925 7.86 3.405 8 3.75 8C4.095 8 4.4075 7.86 4.63375 7.63375L8.38375 3.88375L9.63375 2.63375C9.86 2.4075 10 2.095 10 1.75C10 1.05937 9.44 0.5 8.75 0.5Z" /></svg>
+                  Neteller
+                </span>
+              </label>
+              <label class="casino-filter__checkbox-item">
+                <input type="checkbox">
+                <span>
+                  <svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 0.5C8.405 0.5 8.0925 0.64 7.86625 0.86625L6.61625 2.11625L3.75 4.9825L2.13375 3.36625C1.9075 3.14 1.595 3 1.25 3C0.56 3 0 3.56 0 4.25C0 4.595 0.14 4.9075 0.36625 5.13375L2.86625 7.63375C3.0925 7.86 3.405 8 3.75 8C4.095 8 4.4075 7.86 4.63375 7.63375L8.38375 3.88375L9.63375 2.63375C9.86 2.4075 10 2.095 10 1.75C10 1.05937 9.44 0.5 8.75 0.5Z" /></svg>
+                  Neteller
+                </span>
+              </label>
+              <label class="casino-filter__checkbox-item">
+                <input type="checkbox">
+                <span>
+                  <svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 0.5C8.405 0.5 8.0925 0.64 7.86625 0.86625L6.61625 2.11625L3.75 4.9825L2.13375 3.36625C1.9075 3.14 1.595 3 1.25 3C0.56 3 0 3.56 0 4.25C0 4.595 0.14 4.9075 0.36625 5.13375L2.86625 7.63375C3.0925 7.86 3.405 8 3.75 8C4.095 8 4.4075 7.86 4.63375 7.63375L8.38375 3.88375L9.63375 2.63375C9.86 2.4075 10 2.095 10 1.75C10 1.05937 9.44 0.5 8.75 0.5Z" /></svg>
+                  Neteller
+                </span>
+              </label>
+              <label class="casino-filter__checkbox-item">
+                <input type="checkbox">
+                <span>
+                  <svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 0.5C8.405 0.5 8.0925 0.64 7.86625 0.86625L6.61625 2.11625L3.75 4.9825L2.13375 3.36625C1.9075 3.14 1.595 3 1.25 3C0.56 3 0 3.56 0 4.25C0 4.595 0.14 4.9075 0.36625 5.13375L2.86625 7.63375C3.0925 7.86 3.405 8 3.75 8C4.095 8 4.4075 7.86 4.63375 7.63375L8.38375 3.88375L9.63375 2.63375C9.86 2.4075 10 2.095 10 1.75C10 1.05937 9.44 0.5 8.75 0.5Z" /></svg>
+                  Neteller
+                </span>
+              </label>
+              <label class="casino-filter__checkbox-item">
+                <input type="checkbox">
+                <span>
+                  <svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 0.5C8.405 0.5 8.0925 0.64 7.86625 0.86625L6.61625 2.11625L3.75 4.9825L2.13375 3.36625C1.9075 3.14 1.595 3 1.25 3C0.56 3 0 3.56 0 4.25C0 4.595 0.14 4.9075 0.36625 5.13375L2.86625 7.63375C3.0925 7.86 3.405 8 3.75 8C4.095 8 4.4075 7.86 4.63375 7.63375L8.38375 3.88375L9.63375 2.63375C9.86 2.4075 10 2.095 10 1.75C10 1.05937 9.44 0.5 8.75 0.5Z" /></svg>
+                  Neteller
+                </span>
+              </label>
+              <label class="casino-filter__checkbox-item">
+                <input type="checkbox">
+                <span>
+                  <svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 0.5C8.405 0.5 8.0925 0.64 7.86625 0.86625L6.61625 2.11625L3.75 4.9825L2.13375 3.36625C1.9075 3.14 1.595 3 1.25 3C0.56 3 0 3.56 0 4.25C0 4.595 0.14 4.9075 0.36625 5.13375L2.86625 7.63375C3.0925 7.86 3.405 8 3.75 8C4.095 8 4.4075 7.86 4.63375 7.63375L8.38375 3.88375L9.63375 2.63375C9.86 2.4075 10 2.095 10 1.75C10 1.05937 9.44 0.5 8.75 0.5Z" /></svg>
+                  Neteller
+                </span>
+              </label>
+            </div>
+            <div class="casino-filter__show-btn-box">
+              <div class="casino-filter__show-btn">
+                <span>Show More</span>
+                <span>Show Less</span>
+                <svg width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.7807 1.46667L7.43404 5.81334C6.9207 6.32668 6.0807 6.32668 5.56737 5.81334L1.2207 1.46667" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="casino-filter__item">
+          <div class="casino-filter__item-title">Language</div>
+          <div class="casino-filter__checkbox">
+            <div class="casino-filter__checkbox-list">
+              <label class="casino-filter__checkbox-item">
+                <input type="checkbox">
+                <span>
+                  <svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 0.5C8.405 0.5 8.0925 0.64 7.86625 0.86625L6.61625 2.11625L3.75 4.9825L2.13375 3.36625C1.9075 3.14 1.595 3 1.25 3C0.56 3 0 3.56 0 4.25C0 4.595 0.14 4.9075 0.36625 5.13375L2.86625 7.63375C3.0925 7.86 3.405 8 3.75 8C4.095 8 4.4075 7.86 4.63375 7.63375L8.38375 3.88375L9.63375 2.63375C9.86 2.4075 10 2.095 10 1.75C10 1.05937 9.44 0.5 8.75 0.5Z" /></svg>
+                  Skrill
+                </span>
+              </label>
+              <label class="casino-filter__checkbox-item">
+                <input type="checkbox">
+                <span>
+                  <svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 0.5C8.405 0.5 8.0925 0.64 7.86625 0.86625L6.61625 2.11625L3.75 4.9825L2.13375 3.36625C1.9075 3.14 1.595 3 1.25 3C0.56 3 0 3.56 0 4.25C0 4.595 0.14 4.9075 0.36625 5.13375L2.86625 7.63375C3.0925 7.86 3.405 8 3.75 8C4.095 8 4.4075 7.86 4.63375 7.63375L8.38375 3.88375L9.63375 2.63375C9.86 2.4075 10 2.095 10 1.75C10 1.05937 9.44 0.5 8.75 0.5Z" /></svg>
+                  Skrill
+                </span>
+              </label>
+              <label class="casino-filter__checkbox-item">
+                <input type="checkbox">
+                <span>
+                  <svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 0.5C8.405 0.5 8.0925 0.64 7.86625 0.86625L6.61625 2.11625L3.75 4.9825L2.13375 3.36625C1.9075 3.14 1.595 3 1.25 3C0.56 3 0 3.56 0 4.25C0 4.595 0.14 4.9075 0.36625 5.13375L2.86625 7.63375C3.0925 7.86 3.405 8 3.75 8C4.095 8 4.4075 7.86 4.63375 7.63375L8.38375 3.88375L9.63375 2.63375C9.86 2.4075 10 2.095 10 1.75C10 1.05937 9.44 0.5 8.75 0.5Z" /></svg>
+                  Skrill
+                </span>
+              </label>
+              <label class="casino-filter__checkbox-item">
+                <input type="checkbox">
+                <span>
+                  <svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 0.5C8.405 0.5 8.0925 0.64 7.86625 0.86625L6.61625 2.11625L3.75 4.9825L2.13375 3.36625C1.9075 3.14 1.595 3 1.25 3C0.56 3 0 3.56 0 4.25C0 4.595 0.14 4.9075 0.36625 5.13375L2.86625 7.63375C3.0925 7.86 3.405 8 3.75 8C4.095 8 4.4075 7.86 4.63375 7.63375L8.38375 3.88375L9.63375 2.63375C9.86 2.4075 10 2.095 10 1.75C10 1.05937 9.44 0.5 8.75 0.5Z" /></svg>
+                  Skrill
+                </span>
+              </label>
+              <label class="casino-filter__checkbox-item">
+                <input type="checkbox">
+                <span>
+                  <svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 0.5C8.405 0.5 8.0925 0.64 7.86625 0.86625L6.61625 2.11625L3.75 4.9825L2.13375 3.36625C1.9075 3.14 1.595 3 1.25 3C0.56 3 0 3.56 0 4.25C0 4.595 0.14 4.9075 0.36625 5.13375L2.86625 7.63375C3.0925 7.86 3.405 8 3.75 8C4.095 8 4.4075 7.86 4.63375 7.63375L8.38375 3.88375L9.63375 2.63375C9.86 2.4075 10 2.095 10 1.75C10 1.05937 9.44 0.5 8.75 0.5Z" /></svg>
+                  Visa
+                </span>
+              </label>
+              <label class="casino-filter__checkbox-item">
+                <input type="checkbox">
+                <span>
+                  <svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 0.5C8.405 0.5 8.0925 0.64 7.86625 0.86625L6.61625 2.11625L3.75 4.9825L2.13375 3.36625C1.9075 3.14 1.595 3 1.25 3C0.56 3 0 3.56 0 4.25C0 4.595 0.14 4.9075 0.36625 5.13375L2.86625 7.63375C3.0925 7.86 3.405 8 3.75 8C4.095 8 4.4075 7.86 4.63375 7.63375L8.38375 3.88375L9.63375 2.63375C9.86 2.4075 10 2.095 10 1.75C10 1.05937 9.44 0.5 8.75 0.5Z" /></svg>
+                  Visa
+                </span>
+              </label>
+              <label class="casino-filter__checkbox-item">
+                <input type="checkbox">
+                <span>
+                  <svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 0.5C8.405 0.5 8.0925 0.64 7.86625 0.86625L6.61625 2.11625L3.75 4.9825L2.13375 3.36625C1.9075 3.14 1.595 3 1.25 3C0.56 3 0 3.56 0 4.25C0 4.595 0.14 4.9075 0.36625 5.13375L2.86625 7.63375C3.0925 7.86 3.405 8 3.75 8C4.095 8 4.4075 7.86 4.63375 7.63375L8.38375 3.88375L9.63375 2.63375C9.86 2.4075 10 2.095 10 1.75C10 1.05937 9.44 0.5 8.75 0.5Z" /></svg>
+                  Visa
+                </span>
+              </label>
+              <label class="casino-filter__checkbox-item">
+                <input type="checkbox">
+                <span>
+                  <svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 0.5C8.405 0.5 8.0925 0.64 7.86625 0.86625L6.61625 2.11625L3.75 4.9825L2.13375 3.36625C1.9075 3.14 1.595 3 1.25 3C0.56 3 0 3.56 0 4.25C0 4.595 0.14 4.9075 0.36625 5.13375L2.86625 7.63375C3.0925 7.86 3.405 8 3.75 8C4.095 8 4.4075 7.86 4.63375 7.63375L8.38375 3.88375L9.63375 2.63375C9.86 2.4075 10 2.095 10 1.75C10 1.05937 9.44 0.5 8.75 0.5Z" /></svg>
+                  Visa
+                </span>
+              </label>
+              <label class="casino-filter__checkbox-item">
+                <input type="checkbox">
+                <span>
+                  <svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 0.5C8.405 0.5 8.0925 0.64 7.86625 0.86625L6.61625 2.11625L3.75 4.9825L2.13375 3.36625C1.9075 3.14 1.595 3 1.25 3C0.56 3 0 3.56 0 4.25C0 4.595 0.14 4.9075 0.36625 5.13375L2.86625 7.63375C3.0925 7.86 3.405 8 3.75 8C4.095 8 4.4075 7.86 4.63375 7.63375L8.38375 3.88375L9.63375 2.63375C9.86 2.4075 10 2.095 10 1.75C10 1.05937 9.44 0.5 8.75 0.5Z" /></svg>
+                  Neteller
+                </span>
+              </label>
+              <label class="casino-filter__checkbox-item">
+                <input type="checkbox">
+                <span>
+                  <svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 0.5C8.405 0.5 8.0925 0.64 7.86625 0.86625L6.61625 2.11625L3.75 4.9825L2.13375 3.36625C1.9075 3.14 1.595 3 1.25 3C0.56 3 0 3.56 0 4.25C0 4.595 0.14 4.9075 0.36625 5.13375L2.86625 7.63375C3.0925 7.86 3.405 8 3.75 8C4.095 8 4.4075 7.86 4.63375 7.63375L8.38375 3.88375L9.63375 2.63375C9.86 2.4075 10 2.095 10 1.75C10 1.05937 9.44 0.5 8.75 0.5Z" /></svg>
+                  Neteller
+                </span>
+              </label>
+              <label class="casino-filter__checkbox-item">
+                <input type="checkbox">
+                <span>
+                  <svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 0.5C8.405 0.5 8.0925 0.64 7.86625 0.86625L6.61625 2.11625L3.75 4.9825L2.13375 3.36625C1.9075 3.14 1.595 3 1.25 3C0.56 3 0 3.56 0 4.25C0 4.595 0.14 4.9075 0.36625 5.13375L2.86625 7.63375C3.0925 7.86 3.405 8 3.75 8C4.095 8 4.4075 7.86 4.63375 7.63375L8.38375 3.88375L9.63375 2.63375C9.86 2.4075 10 2.095 10 1.75C10 1.05937 9.44 0.5 8.75 0.5Z" /></svg>
+                  Neteller
+                </span>
+              </label>
+              <label class="casino-filter__checkbox-item">
+                <input type="checkbox">
+                <span>
+                  <svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 0.5C8.405 0.5 8.0925 0.64 7.86625 0.86625L6.61625 2.11625L3.75 4.9825L2.13375 3.36625C1.9075 3.14 1.595 3 1.25 3C0.56 3 0 3.56 0 4.25C0 4.595 0.14 4.9075 0.36625 5.13375L2.86625 7.63375C3.0925 7.86 3.405 8 3.75 8C4.095 8 4.4075 7.86 4.63375 7.63375L8.38375 3.88375L9.63375 2.63375C9.86 2.4075 10 2.095 10 1.75C10 1.05937 9.44 0.5 8.75 0.5Z" /></svg>
+                  Neteller
+                </span>
+              </label>
+            </div>
+            <div class="casino-filter__show-btn-box">
+              <div class="casino-filter__show-btn">
+                <span>Show More</span>
+                <span>Show Less</span>
+                <svg width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.7807 1.46667L7.43404 5.81334C6.9207 6.32668 6.0807 6.32668 5.56737 5.81334L1.2207 1.46667" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="casino-filter__item">
+          <div class="casino-filter__item-title">Software</div>
+          <div class="casino-filter__checkbox">
+            <div class="casino-filter__checkbox-list">
+              <label class="casino-filter__checkbox-item">
+                <input type="checkbox">
+                <span>
+                  <svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 0.5C8.405 0.5 8.0925 0.64 7.86625 0.86625L6.61625 2.11625L3.75 4.9825L2.13375 3.36625C1.9075 3.14 1.595 3 1.25 3C0.56 3 0 3.56 0 4.25C0 4.595 0.14 4.9075 0.36625 5.13375L2.86625 7.63375C3.0925 7.86 3.405 8 3.75 8C4.095 8 4.4075 7.86 4.63375 7.63375L8.38375 3.88375L9.63375 2.63375C9.86 2.4075 10 2.095 10 1.75C10 1.05937 9.44 0.5 8.75 0.5Z" /></svg>
+                  NetEnt
+                </span>
+              </label>
+              <label class="casino-filter__checkbox-item">
+                <input type="checkbox">
+                <span>
+                  <svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 0.5C8.405 0.5 8.0925 0.64 7.86625 0.86625L6.61625 2.11625L3.75 4.9825L2.13375 3.36625C1.9075 3.14 1.595 3 1.25 3C0.56 3 0 3.56 0 4.25C0 4.595 0.14 4.9075 0.36625 5.13375L2.86625 7.63375C3.0925 7.86 3.405 8 3.75 8C4.095 8 4.4075 7.86 4.63375 7.63375L8.38375 3.88375L9.63375 2.63375C9.86 2.4075 10 2.095 10 1.75C10 1.05937 9.44 0.5 8.75 0.5Z" /></svg>
+                  Swedish
+                </span>
+              </label>
+              <label class="casino-filter__checkbox-item">
+                <input type="checkbox">
+                <span>
+                  <svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 0.5C8.405 0.5 8.0925 0.64 7.86625 0.86625L6.61625 2.11625L3.75 4.9825L2.13375 3.36625C1.9075 3.14 1.595 3 1.25 3C0.56 3 0 3.56 0 4.25C0 4.595 0.14 4.9075 0.36625 5.13375L2.86625 7.63375C3.0925 7.86 3.405 8 3.75 8C4.095 8 4.4075 7.86 4.63375 7.63375L8.38375 3.88375L9.63375 2.63375C9.86 2.4075 10 2.095 10 1.75C10 1.05937 9.44 0.5 8.75 0.5Z" /></svg>
+                  Skrill
+                </span>
+              </label>
+              <label class="casino-filter__checkbox-item">
+                <input type="checkbox">
+                <span>
+                  <svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 0.5C8.405 0.5 8.0925 0.64 7.86625 0.86625L6.61625 2.11625L3.75 4.9825L2.13375 3.36625C1.9075 3.14 1.595 3 1.25 3C0.56 3 0 3.56 0 4.25C0 4.595 0.14 4.9075 0.36625 5.13375L2.86625 7.63375C3.0925 7.86 3.405 8 3.75 8C4.095 8 4.4075 7.86 4.63375 7.63375L8.38375 3.88375L9.63375 2.63375C9.86 2.4075 10 2.095 10 1.75C10 1.05937 9.44 0.5 8.75 0.5Z" /></svg>
+                  Skrill
+                </span>
+              </label>
+              <label class="casino-filter__checkbox-item">
+                <input type="checkbox">
+                <span>
+                  <svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 0.5C8.405 0.5 8.0925 0.64 7.86625 0.86625L6.61625 2.11625L3.75 4.9825L2.13375 3.36625C1.9075 3.14 1.595 3 1.25 3C0.56 3 0 3.56 0 4.25C0 4.595 0.14 4.9075 0.36625 5.13375L2.86625 7.63375C3.0925 7.86 3.405 8 3.75 8C4.095 8 4.4075 7.86 4.63375 7.63375L8.38375 3.88375L9.63375 2.63375C9.86 2.4075 10 2.095 10 1.75C10 1.05937 9.44 0.5 8.75 0.5Z" /></svg>
+                  Pragmatic Play
+                </span>
+              </label>
+              <label class="casino-filter__checkbox-item">
+                <input type="checkbox">
+                <span>
+                  <svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 0.5C8.405 0.5 8.0925 0.64 7.86625 0.86625L6.61625 2.11625L3.75 4.9825L2.13375 3.36625C1.9075 3.14 1.595 3 1.25 3C0.56 3 0 3.56 0 4.25C0 4.595 0.14 4.9075 0.36625 5.13375L2.86625 7.63375C3.0925 7.86 3.405 8 3.75 8C4.095 8 4.4075 7.86 4.63375 7.63375L8.38375 3.88375L9.63375 2.63375C9.86 2.4075 10 2.095 10 1.75C10 1.05937 9.44 0.5 8.75 0.5Z" /></svg>
+                  Visa
+                </span>
+              </label>
+              <label class="casino-filter__checkbox-item">
+                <input type="checkbox">
+                <span>
+                  <svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 0.5C8.405 0.5 8.0925 0.64 7.86625 0.86625L6.61625 2.11625L3.75 4.9825L2.13375 3.36625C1.9075 3.14 1.595 3 1.25 3C0.56 3 0 3.56 0 4.25C0 4.595 0.14 4.9075 0.36625 5.13375L2.86625 7.63375C3.0925 7.86 3.405 8 3.75 8C4.095 8 4.4075 7.86 4.63375 7.63375L8.38375 3.88375L9.63375 2.63375C9.86 2.4075 10 2.095 10 1.75C10 1.05937 9.44 0.5 8.75 0.5Z" /></svg>
+                  Visa
+                </span>
+              </label>
+              <label class="casino-filter__checkbox-item">
+                <input type="checkbox">
+                <span>
+                  <svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 0.5C8.405 0.5 8.0925 0.64 7.86625 0.86625L6.61625 2.11625L3.75 4.9825L2.13375 3.36625C1.9075 3.14 1.595 3 1.25 3C0.56 3 0 3.56 0 4.25C0 4.595 0.14 4.9075 0.36625 5.13375L2.86625 7.63375C3.0925 7.86 3.405 8 3.75 8C4.095 8 4.4075 7.86 4.63375 7.63375L8.38375 3.88375L9.63375 2.63375C9.86 2.4075 10 2.095 10 1.75C10 1.05937 9.44 0.5 8.75 0.5Z" /></svg>
+                  Visa
+                </span>
+              </label>
+              <label class="casino-filter__checkbox-item">
+                <input type="checkbox">
+                <span>
+                  <svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 0.5C8.405 0.5 8.0925 0.64 7.86625 0.86625L6.61625 2.11625L3.75 4.9825L2.13375 3.36625C1.9075 3.14 1.595 3 1.25 3C0.56 3 0 3.56 0 4.25C0 4.595 0.14 4.9075 0.36625 5.13375L2.86625 7.63375C3.0925 7.86 3.405 8 3.75 8C4.095 8 4.4075 7.86 4.63375 7.63375L8.38375 3.88375L9.63375 2.63375C9.86 2.4075 10 2.095 10 1.75C10 1.05937 9.44 0.5 8.75 0.5Z" /></svg>
+                  Two Lines Example
+                </span>
+              </label>
+              <label class="casino-filter__checkbox-item">
+                <input type="checkbox">
+                <span>
+                  <svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 0.5C8.405 0.5 8.0925 0.64 7.86625 0.86625L6.61625 2.11625L3.75 4.9825L2.13375 3.36625C1.9075 3.14 1.595 3 1.25 3C0.56 3 0 3.56 0 4.25C0 4.595 0.14 4.9075 0.36625 5.13375L2.86625 7.63375C3.0925 7.86 3.405 8 3.75 8C4.095 8 4.4075 7.86 4.63375 7.63375L8.38375 3.88375L9.63375 2.63375C9.86 2.4075 10 2.095 10 1.75C10 1.05937 9.44 0.5 8.75 0.5Z" /></svg>
+                  Neteller
+                </span>
+              </label>
+              <label class="casino-filter__checkbox-item">
+                <input type="checkbox">
+                <span>
+                  <svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 0.5C8.405 0.5 8.0925 0.64 7.86625 0.86625L6.61625 2.11625L3.75 4.9825L2.13375 3.36625C1.9075 3.14 1.595 3 1.25 3C0.56 3 0 3.56 0 4.25C0 4.595 0.14 4.9075 0.36625 5.13375L2.86625 7.63375C3.0925 7.86 3.405 8 3.75 8C4.095 8 4.4075 7.86 4.63375 7.63375L8.38375 3.88375L9.63375 2.63375C9.86 2.4075 10 2.095 10 1.75C10 1.05937 9.44 0.5 8.75 0.5Z" /></svg>
+                  Neteller
+                </span>
+              </label>
+              <label class="casino-filter__checkbox-item">
+                <input type="checkbox">
+                <span>
+                  <svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 0.5C8.405 0.5 8.0925 0.64 7.86625 0.86625L6.61625 2.11625L3.75 4.9825L2.13375 3.36625C1.9075 3.14 1.595 3 1.25 3C0.56 3 0 3.56 0 4.25C0 4.595 0.14 4.9075 0.36625 5.13375L2.86625 7.63375C3.0925 7.86 3.405 8 3.75 8C4.095 8 4.4075 7.86 4.63375 7.63375L8.38375 3.88375L9.63375 2.63375C9.86 2.4075 10 2.095 10 1.75C10 1.05937 9.44 0.5 8.75 0.5Z" /></svg>
+                  Neteller
+                </span>
+              </label>
+              <label class="casino-filter__checkbox-item">
+                <input type="checkbox">
+                <span>
+                  <svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 0.5C8.405 0.5 8.0925 0.64 7.86625 0.86625L6.61625 2.11625L3.75 4.9825L2.13375 3.36625C1.9075 3.14 1.595 3 1.25 3C0.56 3 0 3.56 0 4.25C0 4.595 0.14 4.9075 0.36625 5.13375L2.86625 7.63375C3.0925 7.86 3.405 8 3.75 8C4.095 8 4.4075 7.86 4.63375 7.63375L8.38375 3.88375L9.63375 2.63375C9.86 2.4075 10 2.095 10 1.75C10 1.05937 9.44 0.5 8.75 0.5Z" /></svg>
+                  Neteller
+                </span>
+              </label>
+              <label class="casino-filter__checkbox-item">
+                <input type="checkbox">
+                <span>
+                  <svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 0.5C8.405 0.5 8.0925 0.64 7.86625 0.86625L6.61625 2.11625L3.75 4.9825L2.13375 3.36625C1.9075 3.14 1.595 3 1.25 3C0.56 3 0 3.56 0 4.25C0 4.595 0.14 4.9075 0.36625 5.13375L2.86625 7.63375C3.0925 7.86 3.405 8 3.75 8C4.095 8 4.4075 7.86 4.63375 7.63375L8.38375 3.88375L9.63375 2.63375C9.86 2.4075 10 2.095 10 1.75C10 1.05937 9.44 0.5 8.75 0.5Z" /></svg>
+                  Neteller
+                </span>
+              </label>
+              <label class="casino-filter__checkbox-item">
+                <input type="checkbox">
+                <span>
+                  <svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 0.5C8.405 0.5 8.0925 0.64 7.86625 0.86625L6.61625 2.11625L3.75 4.9825L2.13375 3.36625C1.9075 3.14 1.595 3 1.25 3C0.56 3 0 3.56 0 4.25C0 4.595 0.14 4.9075 0.36625 5.13375L2.86625 7.63375C3.0925 7.86 3.405 8 3.75 8C4.095 8 4.4075 7.86 4.63375 7.63375L8.38375 3.88375L9.63375 2.63375C9.86 2.4075 10 2.095 10 1.75C10 1.05937 9.44 0.5 8.75 0.5Z" /></svg>
+                  Neteller
+                </span>
+              </label>
+            </div>
+            <div class="casino-filter__show-btn-box">
+              <div class="casino-filter__show-btn">
+                <span>Show More</span>
+                <span>Show Less</span>
+                <svg width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.7807 1.46667L7.43404 5.81334C6.9207 6.32668 6.0807 6.32668 5.56737 5.81334L1.2207 1.46667" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="casino-filter__item">
+          <div class="casino-filter__item-title">Licenses</div>
+          <div class="casino-filter__checkbox">
+            <div class="casino-filter__checkbox-list">
+              <label class="casino-filter__checkbox-item">
+                <input type="checkbox">
+                <span>
+                  <svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 0.5C8.405 0.5 8.0925 0.64 7.86625 0.86625L6.61625 2.11625L3.75 4.9825L2.13375 3.36625C1.9075 3.14 1.595 3 1.25 3C0.56 3 0 3.56 0 4.25C0 4.595 0.14 4.9075 0.36625 5.13375L2.86625 7.63375C3.0925 7.86 3.405 8 3.75 8C4.095 8 4.4075 7.86 4.63375 7.63375L8.38375 3.88375L9.63375 2.63375C9.86 2.4075 10 2.095 10 1.75C10 1.05937 9.44 0.5 8.75 0.5Z" /></svg>
+                  English
+                </span>
+              </label>
+              <label class="casino-filter__checkbox-item">
+                <input type="checkbox">
+                <span>
+                  <svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 0.5C8.405 0.5 8.0925 0.64 7.86625 0.86625L6.61625 2.11625L3.75 4.9825L2.13375 3.36625C1.9075 3.14 1.595 3 1.25 3C0.56 3 0 3.56 0 4.25C0 4.595 0.14 4.9075 0.36625 5.13375L2.86625 7.63375C3.0925 7.86 3.405 8 3.75 8C4.095 8 4.4075 7.86 4.63375 7.63375L8.38375 3.88375L9.63375 2.63375C9.86 2.4075 10 2.095 10 1.75C10 1.05937 9.44 0.5 8.75 0.5Z" /></svg>
+                  Swedish
+                </span>
+              </label>
+              <label class="casino-filter__checkbox-item">
+                <input type="checkbox">
+                <span>
+                  <svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 0.5C8.405 0.5 8.0925 0.64 7.86625 0.86625L6.61625 2.11625L3.75 4.9825L2.13375 3.36625C1.9075 3.14 1.595 3 1.25 3C0.56 3 0 3.56 0 4.25C0 4.595 0.14 4.9075 0.36625 5.13375L2.86625 7.63375C3.0925 7.86 3.405 8 3.75 8C4.095 8 4.4075 7.86 4.63375 7.63375L8.38375 3.88375L9.63375 2.63375C9.86 2.4075 10 2.095 10 1.75C10 1.05937 9.44 0.5 8.75 0.5Z" /></svg>
+                  Skrill
+                </span>
+              </label>
+              <label class="casino-filter__checkbox-item">
+                <input type="checkbox">
+                <span>
+                  <svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 0.5C8.405 0.5 8.0925 0.64 7.86625 0.86625L6.61625 2.11625L3.75 4.9825L2.13375 3.36625C1.9075 3.14 1.595 3 1.25 3C0.56 3 0 3.56 0 4.25C0 4.595 0.14 4.9075 0.36625 5.13375L2.86625 7.63375C3.0925 7.86 3.405 8 3.75 8C4.095 8 4.4075 7.86 4.63375 7.63375L8.38375 3.88375L9.63375 2.63375C9.86 2.4075 10 2.095 10 1.75C10 1.05937 9.44 0.5 8.75 0.5Z" /></svg>
+                  Skrill
+                </span>
+              </label>
+              <label class="casino-filter__checkbox-item">
+                <input type="checkbox">
+                <span>
+                  <svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 0.5C8.405 0.5 8.0925 0.64 7.86625 0.86625L6.61625 2.11625L3.75 4.9825L2.13375 3.36625C1.9075 3.14 1.595 3 1.25 3C0.56 3 0 3.56 0 4.25C0 4.595 0.14 4.9075 0.36625 5.13375L2.86625 7.63375C3.0925 7.86 3.405 8 3.75 8C4.095 8 4.4075 7.86 4.63375 7.63375L8.38375 3.88375L9.63375 2.63375C9.86 2.4075 10 2.095 10 1.75C10 1.05937 9.44 0.5 8.75 0.5Z" /></svg>
+                  German
+                </span>
+              </label>
+              <label class="casino-filter__checkbox-item">
+                <input type="checkbox">
+                <span>
+                  <svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 0.5C8.405 0.5 8.0925 0.64 7.86625 0.86625L6.61625 2.11625L3.75 4.9825L2.13375 3.36625C1.9075 3.14 1.595 3 1.25 3C0.56 3 0 3.56 0 4.25C0 4.595 0.14 4.9075 0.36625 5.13375L2.86625 7.63375C3.0925 7.86 3.405 8 3.75 8C4.095 8 4.4075 7.86 4.63375 7.63375L8.38375 3.88375L9.63375 2.63375C9.86 2.4075 10 2.095 10 1.75C10 1.05937 9.44 0.5 8.75 0.5Z" /></svg>
+                  Visa
+                </span>
+              </label>
+              <label class="casino-filter__checkbox-item">
+                <input type="checkbox">
+                <span>
+                  <svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 0.5C8.405 0.5 8.0925 0.64 7.86625 0.86625L6.61625 2.11625L3.75 4.9825L2.13375 3.36625C1.9075 3.14 1.595 3 1.25 3C0.56 3 0 3.56 0 4.25C0 4.595 0.14 4.9075 0.36625 5.13375L2.86625 7.63375C3.0925 7.86 3.405 8 3.75 8C4.095 8 4.4075 7.86 4.63375 7.63375L8.38375 3.88375L9.63375 2.63375C9.86 2.4075 10 2.095 10 1.75C10 1.05937 9.44 0.5 8.75 0.5Z" /></svg>
+                  Visa
+                </span>
+              </label>
+              <label class="casino-filter__checkbox-item">
+                <input type="checkbox">
+                <span>
+                  <svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 0.5C8.405 0.5 8.0925 0.64 7.86625 0.86625L6.61625 2.11625L3.75 4.9825L2.13375 3.36625C1.9075 3.14 1.595 3 1.25 3C0.56 3 0 3.56 0 4.25C0 4.595 0.14 4.9075 0.36625 5.13375L2.86625 7.63375C3.0925 7.86 3.405 8 3.75 8C4.095 8 4.4075 7.86 4.63375 7.63375L8.38375 3.88375L9.63375 2.63375C9.86 2.4075 10 2.095 10 1.75C10 1.05937 9.44 0.5 8.75 0.5Z" /></svg>
+                  Visa
+                </span>
+              </label>
+              <label class="casino-filter__checkbox-item">
+                <input type="checkbox">
+                <span>
+                  <svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 0.5C8.405 0.5 8.0925 0.64 7.86625 0.86625L6.61625 2.11625L3.75 4.9825L2.13375 3.36625C1.9075 3.14 1.595 3 1.25 3C0.56 3 0 3.56 0 4.25C0 4.595 0.14 4.9075 0.36625 5.13375L2.86625 7.63375C3.0925 7.86 3.405 8 3.75 8C4.095 8 4.4075 7.86 4.63375 7.63375L8.38375 3.88375L9.63375 2.63375C9.86 2.4075 10 2.095 10 1.75C10 1.05937 9.44 0.5 8.75 0.5Z" /></svg>
+                  Spanish
+                </span>
+              </label>
+              <label class="casino-filter__checkbox-item">
+                <input type="checkbox">
+                <span>
+                  <svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 0.5C8.405 0.5 8.0925 0.64 7.86625 0.86625L6.61625 2.11625L3.75 4.9825L2.13375 3.36625C1.9075 3.14 1.595 3 1.25 3C0.56 3 0 3.56 0 4.25C0 4.595 0.14 4.9075 0.36625 5.13375L2.86625 7.63375C3.0925 7.86 3.405 8 3.75 8C4.095 8 4.4075 7.86 4.63375 7.63375L8.38375 3.88375L9.63375 2.63375C9.86 2.4075 10 2.095 10 1.75C10 1.05937 9.44 0.5 8.75 0.5Z" /></svg>
+                  Neteller
+                </span>
+              </label>
+              <label class="casino-filter__checkbox-item">
+                <input type="checkbox">
+                <span>
+                  <svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 0.5C8.405 0.5 8.0925 0.64 7.86625 0.86625L6.61625 2.11625L3.75 4.9825L2.13375 3.36625C1.9075 3.14 1.595 3 1.25 3C0.56 3 0 3.56 0 4.25C0 4.595 0.14 4.9075 0.36625 5.13375L2.86625 7.63375C3.0925 7.86 3.405 8 3.75 8C4.095 8 4.4075 7.86 4.63375 7.63375L8.38375 3.88375L9.63375 2.63375C9.86 2.4075 10 2.095 10 1.75C10 1.05937 9.44 0.5 8.75 0.5Z" /></svg>
+                  Neteller
+                </span>
+              </label>
+              <label class="casino-filter__checkbox-item">
+                <input type="checkbox">
+                <span>
+                  <svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 0.5C8.405 0.5 8.0925 0.64 7.86625 0.86625L6.61625 2.11625L3.75 4.9825L2.13375 3.36625C1.9075 3.14 1.595 3 1.25 3C0.56 3 0 3.56 0 4.25C0 4.595 0.14 4.9075 0.36625 5.13375L2.86625 7.63375C3.0925 7.86 3.405 8 3.75 8C4.095 8 4.4075 7.86 4.63375 7.63375L8.38375 3.88375L9.63375 2.63375C9.86 2.4075 10 2.095 10 1.75C10 1.05937 9.44 0.5 8.75 0.5Z" /></svg>
+                  Neteller
+                </span>
+              </label>
+              <label class="casino-filter__checkbox-item">
+                <input type="checkbox">
+                <span>
+                  <svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 0.5C8.405 0.5 8.0925 0.64 7.86625 0.86625L6.61625 2.11625L3.75 4.9825L2.13375 3.36625C1.9075 3.14 1.595 3 1.25 3C0.56 3 0 3.56 0 4.25C0 4.595 0.14 4.9075 0.36625 5.13375L2.86625 7.63375C3.0925 7.86 3.405 8 3.75 8C4.095 8 4.4075 7.86 4.63375 7.63375L8.38375 3.88375L9.63375 2.63375C9.86 2.4075 10 2.095 10 1.75C10 1.05937 9.44 0.5 8.75 0.5Z" /></svg>
+                  Neteller
+                </span>
+              </label>
+              <label class="casino-filter__checkbox-item">
+                <input type="checkbox">
+                <span>
+                  <svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 0.5C8.405 0.5 8.0925 0.64 7.86625 0.86625L6.61625 2.11625L3.75 4.9825L2.13375 3.36625C1.9075 3.14 1.595 3 1.25 3C0.56 3 0 3.56 0 4.25C0 4.595 0.14 4.9075 0.36625 5.13375L2.86625 7.63375C3.0925 7.86 3.405 8 3.75 8C4.095 8 4.4075 7.86 4.63375 7.63375L8.38375 3.88375L9.63375 2.63375C9.86 2.4075 10 2.095 10 1.75C10 1.05937 9.44 0.5 8.75 0.5Z" /></svg>
+                  Neteller
+                </span>
+              </label>
+              <label class="casino-filter__checkbox-item">
+                <input type="checkbox">
+                <span>
+                  <svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 0.5C8.405 0.5 8.0925 0.64 7.86625 0.86625L6.61625 2.11625L3.75 4.9825L2.13375 3.36625C1.9075 3.14 1.595 3 1.25 3C0.56 3 0 3.56 0 4.25C0 4.595 0.14 4.9075 0.36625 5.13375L2.86625 7.63375C3.0925 7.86 3.405 8 3.75 8C4.095 8 4.4075 7.86 4.63375 7.63375L8.38375 3.88375L9.63375 2.63375C9.86 2.4075 10 2.095 10 1.75C10 1.05937 9.44 0.5 8.75 0.5Z" /></svg>
+                  Neteller
+                </span>
+              </label>
+              <label class="casino-filter__checkbox-item">
+                <input type="checkbox">
+                <span>
+                  <svg width="10" height="8" viewBox="0 0 10 8" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.75 0.5C8.405 0.5 8.0925 0.64 7.86625 0.86625L6.61625 2.11625L3.75 4.9825L2.13375 3.36625C1.9075 3.14 1.595 3 1.25 3C0.56 3 0 3.56 0 4.25C0 4.595 0.14 4.9075 0.36625 5.13375L2.86625 7.63375C3.0925 7.86 3.405 8 3.75 8C4.095 8 4.4075 7.86 4.63375 7.63375L8.38375 3.88375L9.63375 2.63375C9.86 2.4075 10 2.095 10 1.75C10 1.05937 9.44 0.5 8.75 0.5Z" /></svg>
+                  Neteller
+                </span>
+              </label>
+            </div>
+            <div class="casino-filter__show-btn-box">
+              <div class="casino-filter__show-btn">
+                <span>Show More</span>
+                <span>Show Less</span>
+                <svg width="13" height="7" viewBox="0 0 13 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.7807 1.46667L7.43404 5.81334C6.9207 6.32668 6.0807 6.32668 5.56737 5.81334L1.2207 1.46667" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="casino-filter__btn-box">
+        <button class="casino-filter__btn" type="submit">Apply Filter</button>
+      </div>
+    </form>
+  </div>
+</div>

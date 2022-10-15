@@ -1,0 +1,407 @@
+.casino-filter {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 101;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(100%);
+  opacity: 0;
+  visibility: hidden;
+  &.active {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+  }
+  &__overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(#1c2642, 0.4);
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+    .casino-filter.active & {
+      opacity: 1;
+    }
+  }
+  &__holder {
+    position: relative;
+    flex: 0 0 740px;
+    max-width: 740px;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #e1e1e7;
+    border-radius: 12px;
+    transform: translateY(20px);
+    opacity: 0;
+    transition-delay: 0.1s;
+    transition: 0.3s ease-in-out;
+    .casino-filter.active & {
+      transform: translateY(0);
+      opacity: 1;
+    }
+    @include response(1200px) {
+      border-radius: 8px;
+      flex: 0 0 calc(100vw - 48px);
+      max-width: calc(100vw - 48px);
+    }
+  }
+  &__form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    @include response(1200px) {
+      height: calc(100vh - 48px);
+    }
+  }
+  &__head {
+    position: relative;
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 36px;
+    border-bottom: 1px solid #e1e1e7;
+    @include response(1200px) {
+      padding: 10px 16px;
+    }
+  }
+  &__title {
+    position: relative;
+    font-family: "Domine";
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 150%;
+    @include response(1200px) {
+      font-size: 18px;
+    }
+  }
+  &__close {
+    position: relative;
+    display: flex;
+    flex: 0 0 auto;
+    padding: 10px;
+    cursor: pointer;
+    margin-right: -10px;
+    @include desktop-hover() {
+      svg {
+        transform: rotate(90deg);
+      }
+    }
+    svg {
+      transition: 0.3s ease-in-out;
+    }
+  }
+  &__body {
+    position: relative;
+    flex: 1 1 auto;
+    overflow-y: auto;
+  }
+  &__item {
+    position: relative;
+    padding: 24px 36px;
+    border-top: 1px solid #e1e1e7;
+    @include response(1200px) {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+    &:first-child {
+      border-top: 0;
+    }
+    &:nth-child(odd) {
+      background: #f8fafd;
+    }
+  }
+  &__item-title {
+    position: relative;
+    margin-bottom: 16px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 150%;
+  }
+  &__reputation {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -24px;
+    margin-left: -16px;
+    @include response(1200px) {
+      margin-top: -16px;
+    }
+  }
+  &__reputation-item {
+    position: relative;
+    flex: 0 0 auto;
+    margin-top: 24px;
+    margin-left: 16px;
+    @include response(1200px) {
+      margin-top: 16px;
+    }
+    input {
+      display: none;
+      &:checked {
+        & + span {
+          &::before {
+            opacity: 0.8;
+          }
+        }
+      }
+    }
+    span {
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding: 6px 24px;
+      border-radius: 100px;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 150%;
+      position: relative;
+      cursor: pointer;
+      transform: perspective(1px);
+      @include response(1200px) {
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        top: 1px;
+        bottom: 1px;
+        left: 1px;
+        right: 1px;
+        border-radius: 100px;
+        background: #f8fafd;
+        z-index: -1;
+        transition: 0.3s ease-in-out;
+      }
+      img {
+        flex: 0 0 auto;
+        margin-right: 10px;
+      }
+    }
+  }
+  &__checkbox-full {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -24px;
+    margin-left: -16px;
+    @include response(1200px) {
+      margin-top: -16px;
+    }
+  }
+  &__checkbox-full-item {
+    position: relative;
+    flex: 0 0 auto;
+    margin-top: 24px;
+    margin-left: 16px;
+    @include response(1200px) {
+      margin-top: 16px;
+    }
+    input {
+      display: none;
+      &:checked {
+        & + span {
+          border-color: #000066;
+          background: #000066;
+          color: #fff;
+          span {
+            color: #ffcc00;
+          }
+        }
+      }
+    }
+    > span {
+      display: block;
+      position: relative;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 150%;
+      padding: 6px 24px;
+      border: 1px solid #e1e1e7;
+      border-radius: 100px;
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+      @include response(1200px) {
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+      @include desktop-hover() {
+        border-color: #000066;
+      }
+      span {
+        color: #3939a3;
+        transition: 0.3s ease-in-out;
+      }
+    }
+  }
+  &__checkbox {
+    position: relative;
+  }
+  &__checkbox-list {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -24px;
+    margin-left: -16px;
+    @include response(1200px) {
+      margin-top: -20px;
+    }
+  }
+  &__checkbox-item {
+    position: relative;
+    flex: 0 0 auto;
+    margin-top: 24px;
+    margin-left: 16px;
+    flex: 0 0 calc(25% - 16px);
+    max-width: calc(25% - 16px);
+    width: 100%;
+    padding-right: 10px;
+    @include response(1200px) {
+      margin-top: 20px;
+    }
+    @include response(767px) {
+      flex: 0 0 calc(50% - 16px);
+      max-width: calc(50% - 16px);
+    }
+    &:nth-child(12) {
+      & ~ .casino-filter__checkbox-item {
+        display: none;
+      }
+      .show-more & {
+        & ~ .casino-filter__checkbox-item {
+          display: block;
+        }
+      }
+    }
+    input {
+      display: none;
+      &:checked {
+        & + span {
+          &::before {
+            background: #000066;
+          }
+          svg {
+            opacity: 1;
+          }
+        }
+      }
+    }
+    span {
+      display: block;
+      position: relative;
+      padding-left: 28px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      cursor: pointer;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        top: 0;
+        left: 0;
+        background: #f8fafd;
+        border: 1px solid #e1e1e7;
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.06);
+        border-radius: 4px;
+        transition: 0.3s ease-in-out;
+      }
+      svg {
+        position: absolute;
+        top: 6px;
+        left: 5px;
+        fill: #fff;
+        opacity: 0;
+        transition: 0.3s ease-in-out;
+      }
+    }
+  }
+  &__show-btn-box {
+    align-items: center;
+    justify-content: center;
+    display: none;
+    margin-top: 32px;
+    .active-show-more & {
+      display: flex;
+    }
+  }
+  &__show-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 150%;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    @include desktop-hover() {
+      color: #cca300;
+      svg {
+        stroke: #cca300;
+      }
+    }
+    span {
+      &:nth-child(2) {
+        display: none;
+      }
+    }
+    svg {
+      flex: 0 0 auto;
+      margin-left: 4px;
+      stroke: #183b56;
+      transition: 0.3s ease-in-out;
+    }
+    .show-more & {
+      span {
+        &:nth-child(1) {
+          display: none;
+        }
+        &:nth-child(2) {
+          display: block;
+        }
+      }
+      svg {
+        transform: scaleY(-1);
+      }
+    }
+  }
+  &__btn-box {
+    position: relative;
+    padding: 24px 36px;
+    border-top: 1px solid #e1e1e7;
+    @include response(1200px) {
+      padding: 16px;
+    }
+  }
+  &__btn {
+    width: 100%;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    color: #000066;
+    cursor: pointer;
+    background: #ffcc00;
+    border-radius: 8px;
+    border: 0;
+    padding: 12px;
+    transition: 0.3s ease-in-out;
+    @include response(1200px) {
+      padding: 8px;
+      font-size: 14px;
+    }
+    @include desktop-hover() {
+      background: #306f46;
+      color: #fff;
+    }
+  }
+}
