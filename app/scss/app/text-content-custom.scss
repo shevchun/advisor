@@ -4,6 +4,9 @@
   border-radius: 8px;
   overflow: hidden;
   margin: 10px 0 20px;
+  & + .general-info {
+    margin-top: 36px;
+  }
   &--color {
     background: #f8fafd;
   }
@@ -29,6 +32,11 @@
     @include response(1200px) {
       margin-right: 0;
       margin-bottom: 24px;
+    }
+    &--big {
+      flex: 0 0 80px;
+      width: 80px;
+      margin-right: 36px;
     }
   }
   &__head-box {
@@ -612,6 +620,405 @@
     letter-spacing: -0.02em;
     @include response(1200px) {
       font-size: 14px;
+    }
+  }
+}
+
+.post-info {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__left {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+  }
+  &__author {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-right: 12px;
+  }
+  &__author-ava {
+    position: relative;
+    flex: 0 0 24px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-right: 12px;
+    overflow: hidden;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__author-name {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+  }
+  &__editor {
+    flex: 0 0 auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 2px 8px;
+    background: rgba(0, 0, 102, 0.12);
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 150%;
+    letter-spacing: 0.04em;
+    margin-right: 24px;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 12px;
+      background: #e1e1e7;
+      top: 50%;
+      margin-top: -6px;
+      right: -13px;
+    }
+    &:last-child {
+      &::before {
+        display: none;
+      }
+    }
+  }
+  &__editor-icon {
+    flex: 0 0 14px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: rgba(#000066, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+  }
+  &__date {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: #5a7184;
+    b {
+      color: #183b56;
+    }
+  }
+  &__right {
+    position: relative;
+    display: flex;
+  }
+  &__disclosure {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+    color: #000066;
+    display: flex;
+    align-items: center;
+  }
+  &__disclosure-icon {
+    display: flex;
+    flex: 0 0 auto;
+    margin-right: 5px;
+  }
+}
+
+.list-casino {
+  position: relative;
+  margin: 10px 0 20px;
+  &__list {
+    position: relative;
+    margin-bottom: 36px;
+  }
+  &__item {
+    position: relative;
+    display: flex;
+    padding: 16px;
+    background: #f8fafd;
+    border: 1px solid #e1e1e7;
+    border-radius: 8px;
+    margin-bottom: 36px;
+    &:nth-child(5) {
+      & ~ .list-casino__item {
+        display: none;
+        .show-all & {
+          display: flex;
+        }
+      }
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &--best {
+      border-color: #ffcc00;
+      border-width: 2px;
+      border-radius: 0 8px 8px 8px;
+    }
+  }
+  &__item-label {
+    position: absolute;
+    left: -2px;
+    bottom: calc(100% + 2px);
+    background: #ffcc00;
+    border-radius: 4px 4px 0px 0px;
+    padding: 4px 16px;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.05em;
+    color: #000066;
+    svg {
+      flex: 0 0 auto;
+      margin-right: 4px;
+    }
+  }
+  &__item-img {
+    position: relative;
+    background: #fff;
+    border: 1px solid #e1e1e7;
+    border-radius: 4px;
+    margin-right: 16px;
+    padding: 7px;
+    flex: 0 0 150px;
+    max-width: 150px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      margin: 0 !important;
+    }
+  }
+  &__item-number {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 2px 9px;
+    border-radius: 3px 0px 4px 0px;
+    font-weight: 500;
+    font-size: 10px;
+    color: #fff;
+    line-height: 150%;
+    background: #183b56;
+    .list-casino__item--best & {
+      color: #000066;
+      background: #ffcc00;
+    }
+  }
+  &__item-info {
+    position: relative;
+    background: #fff;
+    display: flex;
+    padding: 16px 20px 16px 16px;
+    border: 1px solid #e1e1e7;
+    border-radius: 4px 0 0 4px;
+    border-right: 0;
+  }
+  &__item-info-rate {
+    position: relative;
+    padding-right: 20px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &::before {
+      content: "";
+      position: absolute;
+      height: 48px;
+      width: 1px;
+      background: #e1e1e7;
+      right: 0;
+      top: 50%;
+      margin-top: -24px;
+    }
+  }
+  &__item-info-rate-top {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__item-info-rate-val {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 150%;
+    color: #cb0101;
+    margin-right: 4px;
+    flex: 0 0 auto;
+  }
+  &__item-info-rate-total {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 150%;
+    color: #979797;
+    flex: 0 0 auto;
+  }
+  &__item-info-rate-bottom {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  &__item-info-time {
+    position: relative;
+    width: 154px;
+    flex: 0 0 154px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__item-info-time-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-size: 16px;
+    line-height: 150%;
+    font-weight: 500;
+    svg {
+      flex: 0 0 auto;
+      margin-right: 4px;
+    }
+    b {
+      flex: 0 0 auto;
+      margin-right: 4px;
+    }
+  }
+  &__item-info-time-bottom {
+    text-align: center;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 150%;
+    color: #979797;
+  }
+  &__item-bonus {
+    position: relative;
+    background: #fff;
+    border: 1px solid #e1e1e7;
+    border-radius: 0 4px 4px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-left: 0;
+    padding: 10px 16px 10px 0;
+  }
+  &__item-bonus-box {
+    position: relative;
+    padding: 10px 16px;
+    background: #fff5cc;
+    border: 1px solid #cca300;
+    border-radius: 4px;
+  }
+  &__item-bonus-title {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 150%;
+    text-align: center;
+  }
+  &__item-bonus-val {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    color: #cb0101;
+    text-align: center;
+  }
+  &__item-controls {
+    position: relative;
+    flex: 0 0 120px;
+    max-width: 120px;
+    width: 100%;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  &__item-btn {
+    position: relative;
+    width: 100%;
+    text-decoration: none;
+    display: block;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    color: #000066;
+    padding: 12px;
+    background: #ffcc00;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+    @include desktop-hover() {
+      text-decoration: none !important;
+      background: #306f46;
+      color: #fff;
+    }
+  }
+  &__item-review-btn {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 150%;
+    color: #979797;
+    .text-content & {
+      color: #979797;
+    }
+  }
+  &__show-more-box {
+    position: relative;
+    justify-content: center;
+    display: none;
+    &.active {
+      display: flex;
+    }
+  }
+  &__show-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    color: #000066;
+    padding: 12px 24px;
+    border: 2px solid #000066;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    @include desktop-hover() {
+      background: #000066;
+      color: #fff;
+      svg {
+        fill: #fff;
+      }
+    }
+    span {
+      &:nth-child(2) {
+        display: none;
+      }
+    }
+    svg {
+      flex: 0 0 auto;
+      margin-left: 8px;
+      fill: #000066;
+      transition: 0.3s ease-in-out;
+    }
+    .show-all & {
+      span {
+        &:nth-child(1) {
+          display: none;
+        }
+      }
+      span {
+        &:nth-child(2) {
+          display: block;
+        }
+      }
     }
   }
 }

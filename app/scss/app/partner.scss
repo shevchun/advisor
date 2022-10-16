@@ -140,6 +140,16 @@
     li {
       flex: 0 0 auto;
       margin-right: 20px;
+      &:nth-child(2) {
+        a.active {
+          background: #000066;
+        }
+      }
+      &:nth-child(3) {
+        a.active {
+          background: #50b975;
+        }
+      }
       @include response(1200px) {
         margin-right: 10px;
       }
@@ -164,6 +174,9 @@
       padding: 10px 20px;
       position: relative;
       transition: 0.3s ease-in-out;
+      @include desktop-hover() {
+        text-decoration: underline;
+      }
       @include response(1200px) {
         font-size: 14px;
         padding-left: 12px;

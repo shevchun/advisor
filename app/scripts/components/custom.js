@@ -2,6 +2,17 @@ import $ from 'jquery'
 
 export default () => {
 
+  $('.list-casino').each((index, element) => {
+    const items = $(element).find('.list-casino__item').length
+    if (items > 5) {
+      $(element).find('.list-casino__show-more-box').addClass('active')
+    }
+  })
+
+  $('.list-casino__show-more').on('click', function moreCasino() {
+    $(this).parents('.list-casino').toggleClass('show-all')
+  })
+
   $('.js-filter-btn').on('click', () => {
     $('.casino-filter').addClass('active')
   })
