@@ -16,6 +16,13 @@
     display: block;
     text-align: center;
   }
+  &--small {
+    padding: 45px 40px;
+    margin-bottom: 0;
+    @include response(1200px) {
+      padding: 24px;
+    }
+  }
   &::before {
     content: "";
     position: absolute;
@@ -60,6 +67,13 @@
       max-width: 100%;
       margin-bottom: 24px;
     }
+    .bonus--small & {
+      flex: 0 0 206px;
+      max-width: 206px;
+      @include response(1200px) {
+        max-width: 100%;
+      }
+    }
   }
   &__title {
     margin-bottom: 4px;
@@ -70,6 +84,9 @@
     line-height: 150%;
     color: #ffcc00;
     @include response(1200px) {
+      font-size: 22px;
+    }
+    .bonus--small & {
       font-size: 22px;
     }
   }
@@ -83,6 +100,9 @@
       padding-left: 32px;
       padding-right: 32px;
     }
+    .bonus--small & {
+      font-size: 14px;
+    }
   }
   &__right {
     position: relative;
@@ -92,6 +112,13 @@
     z-index: 1;
     @include response(1200px) {
       max-width: 100%;
+    }
+    .bonus--small & {
+      flex: 0 0 508px;
+      max-width: 508px;
+      @include response(1200px) {
+        max-width: 100%;
+      }
     }
   }
   &__form {
@@ -119,12 +146,26 @@
       @include response(1200px) {
         max-width: 100%;
       }
+      .bonus--small & {
+        flex: 0 0 220px;
+        max-width: 220px;
+        @include response(1200px) {
+          max-width: 100%;
+        }
+      }
     }
     &:nth-child(2) {
       flex: 0 0 278px;
       max-width: 278px;
       @include response(1200px) {
         max-width: 100%;
+      }
+      .bonus--small & {
+        flex: 0 0 240px;
+        max-width: 240px;
+        @include response(1200px) {
+          max-width: 100%;
+        }
       }
     }
   }
@@ -163,6 +204,9 @@
     letter-spacing: -0.02em;
     color: rgba(255, 255, 255, 0.9);
     margin-bottom: 8px;
+    .bonus--small & {
+      font-size: 12px;
+    }
     @include response(1200px) {
       font-size: 12px;
     }
@@ -233,6 +277,14 @@
         left: 3px;
         opacity: 0;
         transition: 0.3s ease-in-out;
+      }
+    }
+    .bonus--small & {
+      span {
+        font-size: 12px;
+        &::after {
+          top: 7px;
+        }
       }
     }
   }

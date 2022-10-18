@@ -3,6 +3,23 @@ import 'slick-carousel';
 
 export default () => {
 
+  if ($('.popular-casinos__gallery-slider').length) {
+    $('.popular-casinos__gallery-slider').slick({
+      slidesToShow: 1,
+      fade: true,
+      prevArrow: '<span class="slick-prev"><svg width="12" height="18" viewBox="0 0 12 18" xmlns="http://www.w3.org/2000/svg"><path d="M9.51984 17.5601C9.13984 17.5601 8.75984 17.4201 8.45984 17.1201L1.39984 10.0601C0.819844 9.48007 0.819844 8.52007 1.39984 7.94007L8.45984 0.880068C9.03984 0.300068 9.99984 0.300068 10.5798 0.880068C11.1598 1.46007 11.1598 2.42007 10.5798 3.00007L4.57984 9.00007L10.5798 15.0001C11.1598 15.5801 11.1598 16.5401 10.5798 17.1201C10.2998 17.4201 9.91984 17.5601 9.51984 17.5601Z" /></svg></span>',
+      nextArrow: '<span class="slick-next"><svg width="12" height="18" viewBox="0 0 12 18" xmlns="http://www.w3.org/2000/svg"><path d="M9.51984 17.5601C9.13984 17.5601 8.75984 17.4201 8.45984 17.1201L1.39984 10.0601C0.819844 9.48007 0.819844 8.52007 1.39984 7.94007L8.45984 0.880068C9.03984 0.300068 9.99984 0.300068 10.5798 0.880068C11.1598 1.46007 11.1598 2.42007 10.5798 3.00007L4.57984 9.00007L10.5798 15.0001C11.1598 15.5801 11.1598 16.5401 10.5798 17.1201C10.2998 17.4201 9.91984 17.5601 9.51984 17.5601Z" /></svg></span>',
+      asNavFor: '.popular-casinos__gallery-slider-nav'
+    })
+
+    $('.popular-casinos__gallery-slider-nav').slick({
+      slidesToShow: 4,
+      focusOnSelect: true,
+      arrows: false,
+      asNavFor: '.popular-casinos__gallery-slider'
+    })
+  }
+
   const providersSettings = {
     slidesToShow: 1,
     dots: true,
@@ -123,7 +140,6 @@ export default () => {
         }
       })
     })
-
   }
 
 }

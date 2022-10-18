@@ -50,7 +50,17 @@
   // }
   ul {
     margin: 10px 0 20px;
-    padding: 0 0 0 25px;
+    padding: 0;
+    list-style: none;
+    &.list-custom-style {
+      padding-left: 20px;
+      li {
+        margin-bottom: 16px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
     &:first-child {
       margin-top: 0;
     }
@@ -59,6 +69,17 @@
     }
     li {
       position: relative;
+      padding-left: 20px;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 5px;
+        height: 5px;
+        background: #183b56;
+        border-radius: 50%;
+        left: 0;
+        top: 10px;
+      }
     }
   }
   iframe {
