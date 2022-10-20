@@ -32,15 +32,17 @@
     flex: 0 0 362px;
     max-width: 362px;
     width: 100%;
-    border: 1px solid #e1e1e7;
-    border-radius: 12px;
-    overflow: hidden;
     @include response(1200px) {
       display: none;
     }
   }
   &__aside-box {
     position: relative;
+    border: 1px solid #e1e1e7;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  &__aside-holder {
   }
   &__aside-row {
     position: relative;

@@ -1,0 +1,107 @@
+.top-casinos {
+  position: relative;
+  border: 1px solid #e1e1e7;
+  border-radius: 8px;
+  overflow: hidden;
+  &__head {
+    position: relative;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150%;
+    color: #fff;
+    padding: 12px 24px;
+    background: #1c2642;
+  }
+  &__list {
+    position: relative;
+  }
+  &__item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 24px;
+    border-bottom: 1px solid #e1e1e7;
+    &:nth-child(even) {
+      background: #f8fafd;
+    }
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+  &__item-img {
+    position: relative;
+    flex: 0 0 72px;
+    width: 72px;
+    margin-right: 20px;
+    background: #fff;
+    border: 1px solid #e1e1e7;
+    border-radius: 4px;
+    padding: 3px;
+    text-align: center;
+    img {
+      width: 100%;
+    }
+  }
+  &__item-info {
+    position: relative;
+    flex: 1 1 auto;
+    overflow: auto;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 20px;
+      background: #e1e1e7;
+      top: 50%;
+      margin-top: -10px;
+      right: 0;
+    }
+  }
+  &__item-title {
+    margin-bottom: 4px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  &__item-link {
+    display: inline-block;
+    vertical-align: top;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    color: #000066;
+    @include desktop-hover() {
+      text-decoration: none;
+    }
+  }
+  &__item-rate {
+    position: relative;
+    padding-left: 10px;
+    flex: 0 0 auto;
+  }
+  &__item-rate-val {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__item-rate-val-cur {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 150%;
+    color: #cb0101;
+    flex: 0 0 auto;
+    margin-right: 4px;
+  }
+  &__item-rate-val-total {
+    font-size: 14px;
+    font-weight: 500;
+    color: #979797;
+    flex: 0 0 auto;
+  }
+  &__item-rate-holder {
+  }
+}

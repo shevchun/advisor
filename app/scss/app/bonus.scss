@@ -57,12 +57,35 @@
       bottom: -93px;
     }
   }
+  &--mini {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    padding: 24px;
+    display: block;
+    text-align: center;
+    &::before {
+      width: 308px;
+      height: 403px;
+      top: -214px;
+      left: -168px;
+    }
+    &::after {
+      width: 350px;
+      height: 255px;
+      right: -155px;
+      bottom: -93px;
+    }
+  }
   &__left {
     position: relative;
     flex: 0 0 258px;
     max-width: 258px;
     width: 100%;
     z-index: 1;
+    .bonus--mini & {
+      max-width: 100%;
+      margin-bottom: 24px;
+    }
     @include response(1200px) {
       max-width: 100%;
       margin-bottom: 24px;
@@ -86,6 +109,11 @@
     @include response(1200px) {
       font-size: 22px;
     }
+    .bonus--mini & {
+      padding-left: 20px;
+      padding-right: 20px;
+      font-size: 22px;
+    }
     .bonus--small & {
       font-size: 22px;
     }
@@ -100,6 +128,10 @@
       padding-left: 32px;
       padding-right: 32px;
     }
+    .bonus--mini & {
+      padding-left: 32px;
+      padding-right: 32px;
+    }
     .bonus--small & {
       font-size: 14px;
     }
@@ -110,6 +142,9 @@
     max-width: 646px;
     width: 100%;
     z-index: 1;
+    .bonus--mini & {
+      max-width: 100%;
+    }
     @include response(1200px) {
       max-width: 100%;
     }
@@ -126,6 +161,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    .bonus--mini & {
+      display: block;
+    }
     @include response(1200px) {
       display: block;
     }
@@ -133,6 +171,12 @@
   &__form-cell {
     position: relative;
     width: 100%;
+    .bonus--mini & {
+      margin-bottom: 24px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
     @include response(1200px) {
       margin-bottom: 24px;
       &:last-child {
@@ -143,6 +187,9 @@
       flex: 0 0 320px;
       max-width: 320px;
       margin-right: 48px;
+      .bonus--mini & {
+        max-width: 100%;
+      }
       @include response(1200px) {
         max-width: 100%;
       }
@@ -157,6 +204,9 @@
     &:nth-child(2) {
       flex: 0 0 278px;
       max-width: 278px;
+      .bonus--mini & {
+        max-width: 100%;
+      }
       @include response(1200px) {
         max-width: 100%;
       }
@@ -204,6 +254,7 @@
     letter-spacing: -0.02em;
     color: rgba(255, 255, 255, 0.9);
     margin-bottom: 8px;
+    .bonus--mini &,
     .bonus--small & {
       font-size: 12px;
     }
@@ -214,6 +265,9 @@
   &__form-checkbo-list {
     display: flex;
     margin-left: -16px;
+    .bonus--mini & {
+      justify-content: center;
+    }
     @include response(1200px) {
       justify-content: center;
     }
@@ -279,6 +333,7 @@
         transition: 0.3s ease-in-out;
       }
     }
+    .bonus--mini &,
     .bonus--small & {
       span {
         font-size: 12px;
