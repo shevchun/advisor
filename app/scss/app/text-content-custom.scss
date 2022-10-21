@@ -632,11 +632,13 @@
   @include response(1200px) {
     flex-wrap: wrap;
   }
+  &--padding {
+    padding: 12px 24px;
+  }
   &__author {
     position: relative;
     display: flex;
     align-items: center;
-    margin-right: 12px;
     @include response(1200px) {
       margin-bottom: 4px;
     }
@@ -672,28 +674,10 @@
     font-size: 10px;
     line-height: 150%;
     letter-spacing: 0.04em;
-    margin-right: 24px;
+    margin-left: 12px;
     @include response(1200px) {
       margin-right: auto;
       margin-bottom: 4px;
-    }
-    &::before {
-      content: "";
-      position: absolute;
-      width: 1px;
-      height: 12px;
-      background: #e1e1e7;
-      top: 50%;
-      margin-top: -6px;
-      right: -13px;
-      @include response(1200px) {
-        display: none;
-      }
-    }
-    &:last-child {
-      &::before {
-        display: none;
-      }
     }
   }
   &__editor-icon {
@@ -712,6 +696,25 @@
     font-size: 14px;
     line-height: 150%;
     color: #5a7184;
+    position: relative;
+    margin-left: 24px;
+    @include response(1200px) {
+      font-size: 12px;
+      margin-left: 0;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 12px;
+      background: #e1e1e7;
+      top: 50%;
+      margin-top: -6px;
+      left: -12px;
+      @include response(1200px) {
+        display: none;
+      }
+    }
     b {
       color: #183b56;
     }
@@ -728,11 +731,61 @@
     color: #000066;
     display: flex;
     align-items: center;
+    cursor: pointer;
+    @include desktop-hover() {
+      text-decoration: underline;
+    }
   }
   &__disclosure-icon {
     display: flex;
     flex: 0 0 auto;
     margin-right: 5px;
+  }
+  &__disclosure-hint {
+    position: absolute;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    color: #fff;
+    background: #1c2642;
+    border-radius: 8px;
+    box-shadow: 0px 36px 21px rgba(0, 0, 0, 0.05);
+    padding: 12px 20px;
+    width: 188px;
+    z-index: 1;
+    left: 50%;
+    margin-left: -94px;
+    top: calc(100% + 13px);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease-in-out;
+    @include response(1200px) {
+      top: calc(100% + 6px);
+      margin-left: 0;
+      right: 0;
+      left: auto;
+    }
+    .post-info__disclosure.active & {
+      opacity: 1;
+      visibility: visible;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 12px;
+      height: 12px;
+      background: #1c2642;
+      transform: rotate(45deg);
+      left: 50%;
+      margin-left: -6px;
+      top: -6px;
+      @include response(1200px) {
+        right: 30px;
+        left: auto;
+        margin-left: 0;
+      }
+    }
   }
 }
 
@@ -2209,6 +2262,327 @@
     position: relative;
     &.text-content {
       color: #403300;
+    }
+  }
+}
+
+.casino-review {
+  position: relative;
+  &__top {
+    position: relative;
+    border: 1px solid #e1e1e7;
+    border-radius: 8px;
+  }
+  &__top-holder {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: #f8fafd;
+    border-bottom: 1px solid #e1e1e7;
+    padding: 24px;
+    border-radius: 8px 8px 0 0;
+    @include response(1200px) {
+      padding: 16px;
+      flex-wrap: wrap;
+    }
+  }
+  &__top-img {
+    position: relative;
+    flex: 0 0 124px;
+    max-width: 124px;
+    width: 100%;
+    margin-right: 32px;
+    @include response(1200px) {
+      flex: 0 0 83px;
+      max-width: 83px;
+      margin-right: 20px;
+      margin-bottom: 24px;
+    }
+  }
+  &__top-box {
+    position: relative;
+    padding-right: 20px;
+    @include response(1200px) {
+      margin-bottom: 24px;
+      flex: 0 0 calc(100% - 103px);
+      max-width: calc(100% - 103px);
+      width: 100%;
+    }
+  }
+  &__top-title {
+    margin: 0 0 4px;
+    font-family: "Domine";
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 150%;
+    @include response(1200px) {
+      font-size: 22px;
+    }
+  }
+  &__top-labels {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: -4px;
+  }
+  &__top-label {
+    position: relative;
+    margin-top: 4px;
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 2px 8px;
+    background: #fff5cc;
+    border: 1px solid rgba(184, 147, 0, 0.6);
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+    @include response(1200px) {
+      font-size: 12px;
+    }
+    b {
+      margin-right: 4px;
+    }
+    .text-content & {
+      img {
+        margin-right: 8px;
+        margin-bottom: 0;
+      }
+    }
+    img {
+      flex: 0 0 auto;
+      margin-right: 8px;
+    }
+  }
+  &__top-btn {
+    position: relative;
+    flex: 0 0 auto;
+    margin-left: auto;
+    font-size: 16px;
+    line-height: 150%;
+    font-weight: 600;
+    color: #000066;
+    text-decoration: none;
+    padding: 16px 32px;
+    background: #ffcc00;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+    text-align: center;
+    @include response(1200px) {
+      font-size: 14px;
+      padding: 8px;
+      width: 100%;
+      border-radius: 4px;
+    }
+    @include desktop-hover() {
+      background: #306f46;
+      color: #fff;
+      .text-content & {
+        text-decoration: none;
+      }
+    }
+  }
+  &__table {
+    position: relative;
+    border: 1px solid #e1e1e7;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  &__table-row {
+    position: relative;
+    display: flex;
+    border-bottom: 1px solid #e1e1e7;
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+  &__table-row-title {
+    position: relative;
+    background: #f8fafd;
+    border-right: 1px solid #e1e1e7;
+    padding: 12px 36px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 150%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 0 0 240px;
+    max-width: 240px;
+    width: 100%;
+    @include response(767px) {
+      padding-left: 12px;
+      padding-right: 12px;
+      flex: 0 0 136px;
+      max-width: 136px;
+      font-size: 14px;
+    }
+  }
+  &__table-row-info {
+    position: relative;
+    flex: 0 0 calc(100% - 240px);
+    max-width: calc(100% - 240px);
+    width: 100%;
+    padding: 12px 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    @include response(767px) {
+      flex: 0 0 calc(100% - 136px);
+      max-width: calc(100% - 136px);
+    }
+    &.more {
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 80px;
+        background: linear-gradient(360deg, #ffffff 60.49%, rgba(255, 255, 255, 0) 100%);
+      }
+    }
+    &.active {
+      &::before {
+        opacity: 0;
+      }
+    }
+  }
+  &__table-row-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: -0.02em;
+    @include response(767px) {
+      font-size: 14px;
+    }
+    .casino-review__table-row-info.more & {
+      height: 48px;
+      overflow: hidden;
+      @include response(767px) {
+        height: 84px;
+      }
+    }
+    .casino-review__table-row-info.active & {
+      height: auto;
+    }
+  }
+  &__table-more-btn {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin-top: 16px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 150%;
+    color: #000066;
+    padding: 4px 12px;
+    border: 1px solid #000066;
+    border-radius: 4px;
+    transition: 0.3s ease-in-out;
+    display: none;
+    .casino-review__table-row-info.more & {
+      display: inline-flex;
+    }
+    @include desktop-hover() {
+      background: #000;
+      color: #fff;
+      svg {
+        stroke: #fff;
+      }
+    }
+    span {
+      &:nth-child(2) {
+        display: none;
+      }
+    }
+    svg {
+      flex: 0 0 auto;
+      margin-left: 6px;
+      fill: none;
+      stroke: #000066;
+      transition: 0.3s ease-in-out;
+    }
+    .casino-review__table-row-info.active & {
+      svg {
+        transform: scaleY(-1);
+      }
+      span {
+        &:nth-child(1) {
+          display: none;
+        }
+        &:nth-child(2) {
+          display: block;
+        }
+      }
+    }
+  }
+  &__table-slider {
+    position: relative;
+    max-width: 518px;
+    width: 100%;
+    @include response(1200px) {
+      max-width: calc(100% + 36px);
+      width: calc(100% + 36px);
+      padding-right: 36px;
+      margin-right: -36px;
+      overflow: hidden;
+    }
+    .slick-list {
+      @include response(1200px) {
+        overflow: visible;
+      }
+    }
+    .slick-track {
+      margin-left: 0;
+    }
+    .slick-slide {
+      margin-right: 10px;
+    }
+    .slick-arrow {
+      position: absolute;
+      top: 50%;
+      margin-top: -9px;
+      display: flex;
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+      @include desktop-hover() {
+        svg {
+          fill: #50b975;
+        }
+      }
+      svg {
+        fill: #183b56;
+        transition: 0.3s ease-in-out;
+      }
+      &.slick-disabled {
+        opacity: 0;
+        pointer-events: none;
+      }
+    }
+    .slick-prev {
+      left: -25px;
+      svg {
+        transform: scaleX(-1);
+      }
+    }
+    .slick-next {
+      right: -20px;
+    }
+  }
+  &__table-slider-item {
+    position: relative;
+    vertical-align: top;
+    padding: 4px;
+    background: #fff;
+    border: 1px solid #e1e1e7;
+    border-radius: 4px;
+    overflow: hidden;
+    img {
+      width: 100%;
     }
   }
 }

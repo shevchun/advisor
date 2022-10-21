@@ -2,6 +2,30 @@ import $ from 'jquery'
 
 export default () => {
 
+  $('.casino-review__table-row-info').each((index, element) => {
+    const innerHeightItem = $(element).find('.casino-review__table-row-text').height()
+    if (innerHeightItem) {
+      const heightBox = $(window).width() < 767 ? 84 : 48
+      if (innerHeightItem > heightBox) {
+        $(element).addClass('more')
+      }
+    }
+  })
+
+  $('.casino-review__table-more-btn').on('click', function moreText() {
+    $(this).parents('.casino-review__table-row-info').toggleClass('active')
+  })
+
+  $('.post-info__disclosure').on('click', function infoHint(event) {
+    event.stopPropagation()
+    $(this).toggleClass('active')
+  })
+
+  $(document).on("click", (event) => {
+    event.stopPropagation()
+    $('.post-info__disclosure').removeClass('active')
+  })
+
   $('.list-casino').each((index, element) => {
     const items = $(element).find('.list-casino__item').length
     if (items > 5) {
@@ -113,20 +137,6 @@ export default () => {
       scrollTop: 0
     }, 500);
   });
-
-  // $('[data-rate]').each((index, element) => {
-  //   const val = $(element).attr('data-rate')
-  //   const full = val.split('.')[0] || null
-  //   const fraction = val.split('.')[1] || null
-  //   $(element).find($('.rate__item-holder-inner')).each((i, item) => {
-  //     if (i < +full) {
-  //       $(item).addClass('active')
-  //     }
-  //     if ((i === +full) && fraction) {
-  //       $(item).addClass('active').css('width', `${fraction}0%`)
-  //     }
-  //   })
-  // })
 
   $(window).scroll(function scroll() {
     const heightWindow = 50
