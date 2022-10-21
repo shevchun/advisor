@@ -182,9 +182,6 @@
     overflow: auto;
     text-decoration: none;
     color: #183b56;
-    @include desktop-hover() {
-      text-decoration: underline;
-    }
     @include response(1200px) {
       .news-item--mobile-row & {
         margin-right: 0;

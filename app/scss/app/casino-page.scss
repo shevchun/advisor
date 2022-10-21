@@ -130,9 +130,18 @@
     position: relative;
     display: flex;
     align-items: center;
-    flex: 0 0 auto;
+    flex: 0 0 255px;
     @include response(1200px) {
       order: 3;
+      flex: 0 0 calc(100% - 135px);
+      max-width: calc(100% - 135px);
+      .select2-container .select2-selection--single .select2-selection__rendered {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding-right: 35px;
+        padding-left: 20px;
+      }
     }
   }
   &__list {

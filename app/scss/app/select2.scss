@@ -1,3 +1,7 @@
+.select-parent {
+  width: 100%;
+}
+
 .select2-container {
   box-sizing: border-box;
   display: inline-block;
@@ -110,6 +114,10 @@
 
 .select2-results__option--selectable {
   cursor: pointer;
+  border-bottom: 1px solid #183b56;
+  &:last-child {
+    border-bottom: 0;
+  }
 }
 
 .select2-container--open .select2-dropdown {

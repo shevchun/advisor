@@ -42,8 +42,6 @@
     border-radius: 12px;
     overflow: hidden;
   }
-  &__aside-holder {
-  }
   &__aside-row {
     position: relative;
     & + .blog-page__aside-row {
@@ -55,7 +53,7 @@
     font-weight: 600;
     font-size: 20px;
     line-height: 150%;
-    padding: 24px 25px 8px;
+    padding: 12px 25px 8px;
   }
   &__aside-list {
     position: relative;
@@ -74,22 +72,29 @@
     display: flex;
     align-items: center;
     text-decoration: none;
-    padding: 16px 24px;
+    padding: 12px 24px;
     transition: 0.3s ease-in-out;
     @include desktop-hover() {
       background: #f8fafd;
     }
     img {
       position: relative;
-      flex: 0 0 36px;
-      width: 36px;
+      flex: 0 0 26px;
+      width: 26px;
       margin-right: 20px;
     }
     span {
       font-weight: 600;
-      font-size: 18px;
+      font-size: 16px;
       line-height: 150%;
       color: #183b56;
+    }
+  }
+  &__aside-img {
+    position: relative;
+    border-top: 1px solid #e1e1e7;
+    img {
+      width: 100%;
     }
   }
 }
