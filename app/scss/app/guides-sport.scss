@@ -18,6 +18,7 @@
     bottom: -174px;
     background: rgba(204, 0, 0, 0.4);
     filter: blur(227px);
+    transform: translate3d(0, 0, 0);
     pointer-events: none;
   }
   &::after {
@@ -30,6 +31,7 @@
     background: rgba(255, 204, 0, 0.2);
     pointer-events: none;
     filter: blur(227px);
+    transform: translate3d(0, 0, 0);
   }
   &__title {
     position: relative;

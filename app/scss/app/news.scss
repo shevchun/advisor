@@ -23,10 +23,13 @@
     width: 570px;
     min-height: 315px;
     overflow: hidden;
+    border-radius: 16px 0 0 16px;
+    transform: translateZ(0);
     @include response(1200px) {
       display: block;
       width: 100%;
       min-height: auto;
+      border-radius: 16px 16px 0 0;
     }
     @include desktop-hover() {
       img {

@@ -33,6 +33,8 @@
     filter: blur(227px);
     top: -190px;
     left: -290px;
+    z-index: 1;
+    transform: translate3d(0, 0, 0);
     @include response(1200px) {
       width: 308px;
       height: 403px;
@@ -50,6 +52,8 @@
     right: -340px;
     bottom: -195px;
     border-radius: 50%;
+    z-index: 1;
+    transform: translate3d(0, 0, 0);
     @include response(1200px) {
       width: 350px;
       height: 255px;
@@ -81,7 +85,7 @@
     flex: 0 0 258px;
     max-width: 258px;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
     .bonus--mini & {
       max-width: 100%;
       margin-bottom: 24px;
@@ -141,7 +145,7 @@
     flex: 0 0 646px;
     max-width: 646px;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
     .bonus--mini & {
       max-width: 100%;
     }
@@ -331,6 +335,9 @@
         left: 3px;
         opacity: 0;
         transition: 0.3s ease-in-out;
+        @include response(1200px) {
+          top: 7px;
+        }
       }
     }
     .bonus--mini &,
