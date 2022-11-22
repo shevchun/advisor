@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include 'head.html' %}
+  <body>
+    {% include 'header.html' %}
+    <div class="wrapper">
+      <div class="first-screen first-screen--pb350">
+        <picture class="first-screen__img">
+          <source srcset="data/first-screen-mobile.jpg" media="(max-width: 1200px)">
+          <img src="data/first-screen.jpg" width="1440" height="648" alt="first-screen">
+        </picture> 
+        <div class="container">
+          <div class="first-screen__title">Contact Us</div>
+          <div class="first-screen__title-descriptions">In this digital generation where information can be easily obtained within seconds, business cards</div>
+        </div>
+      </div>
+      <div class="contacts">
+        <div class="container">
+          <form class="contacts__form">
+            <div class="contacts__form-row">
+              <div class="contacts__form-cell">
+                <input type="text" class="input-style" placeholder="Name">
+              </div>
+              <div class="contacts__form-cell">
+                <input type="email" class="input-style" placeholder="Email">
+              </div>
+            </div>
+            <div class="contacts__form-row">
+              <div class="contacts__form-cell">
+                <div class="select-parent select-parent--big js-parent-select" data-placeholder="Country">
+                  <select class="init-select2" style="width: 100%;">
+                    <option></option>
+                    <option value="Malaysia">Malaysia</option>
+                    <option value="Malaysia">Malaysia</option>
+                    <option value="Malaysia">Malaysia</option>
+                    <option value="Malaysia">Malaysia</option>
+                  </select>
+                </div>
+              </div>
+              <div class="contacts__form-cell">
+                <div class="select-parent select-parent--big js-parent-select" data-placeholder="Reason">
+                  <select class="init-select2" style="width: 100%;">
+                    <option></option>
+                    <option value="Reason 1">Reason 1</option>
+                    <option value="Reason 1">Reason 1</option>
+                    <option value="Reason 1">Reason 1</option>
+                    <option value="Reason 1">Reason 1</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="contacts__form-row">
+              <div class="contacts__form-cell contacts__form-cell--full">
+                <textarea class="textarea-style" placeholder="Type your message…."></textarea>
+              </div>
+            </div>
+            <div class="contacts__form-descriptions">By submitting this form you agree to our terms and conditions and our Privacy Policy which explains how we may collect, use and disclose your personal information including to third parties.</div>
+            <button class="contacts__form-btn" type="submit">Send a message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    {% include 'footer.html' %}
+    {% include 'popup.html' %}
+    {% include 'js.html' %}
+  </body>
+</html>
